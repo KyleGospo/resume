@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+<html lang="en-US" moznomarginboxes mozdisallowselectionprint>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<!-- mobile meta tag -->
+				
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+					
+		<meta name="theme-color" content="#FFFFFF">
+		<link rel="icon" sizes="192x192" href="/logo.png">
+
+		<title>City 17: Episode One - Kyle Gospodnetich</title>
+		
+		<!-- Custom Favicon -->
+					
+				
+		<link rel="alternate" type="text/xml" title="Kyle Gospodnetich RSS 0.92 Feed" href="https://kylegospodneti.ch/feed/rss/">
+		<link rel="alternate" type="application/atom+xml" title="Kyle Gospodnetich Atom Feed" href="https://kylegospodneti.ch/feed/atom/">
+		<link rel="alternate" type="application/rss+xml" title="Kyle Gospodnetich RSS 2.0 Feed" href="https://kylegospodneti.ch/feed/">
+		<link rel="pingback" href="https://kylegospodneti.ch/xmlrpc.php">
+
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v17.8 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="The postmortem story of City 17: Episode One. How we built the mod, how I improved the visuals of the Source Engine, and a look at the Source Code." />
+	<link rel="canonical" href="https://kylegospodneti.ch/work/city17/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="City 17: Episode One - Kyle Gospodnetich" />
+	<meta property="og:description" content="The postmortem story of City 17: Episode One. How we built the mod, how I improved the visuals of the Source Engine, and a look at the Source Code." />
+	<meta property="og:url" content="https://kylegospodneti.ch/work/city17/" />
+	<meta property="og:site_name" content="Kyle Gospodnetich" />
+	<meta property="article:modified_time" content="2020-11-14T21:26:07+00:00" />
+	<meta property="og:image" content="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040015-1.jpg" />
+	<meta property="og:image:width" content="1920" />
+	<meta property="og:image:height" content="1080" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://kylegospodneti.ch-content/uploads/2016/04/c17_city_day_040015-1.jpg" />
+	<meta name="twitter:site" content="@kylegospo" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="15 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://kylegospodneti.ch/#/schema/person/1efbfc249a8460142a1919ac38aaee79","name":"Kyle Gospodnetich","image":{"@type":"ImageObject","@id":"https://kylegospodneti.ch/#personlogo","inLanguage":"en-US","url":"https://kylegospodneti.ch/wp-content/uploads/2023/03/IMG_8439-02.jpeg","contentUrl":"https://kylegospodneti.ch/wp-content/uploads/2023/03/IMG_8439-02.jpeg","width":1280,"height":1280,"caption":"Kyle Gospodnetich"},"logo":{"@id":"https://kylegospodneti.ch/#personlogo"}},{"@type":"WebSite","@id":"https://kylegospodneti.ch/#website","url":"https://kylegospodneti.ch/","name":"Kyle Gospodnetich","description":"Software, Web, and Game Developer","publisher":{"@id":"https://kylegospodneti.ch/#/schema/person/1efbfc249a8460142a1919ac38aaee79"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://kylegospodneti.ch/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://kylegospodneti.ch/work/city17/#primaryimage","inLanguage":"en-US","url":"https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040015-1.jpg","contentUrl":"https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040015-1.jpg","width":1920,"height":1080},{"@type":"WebPage","@id":"https://kylegospodneti.ch/work/city17/#webpage","url":"https://kylegospodneti.ch/work/city17/","name":"City 17: Episode One - Kyle Gospodnetich","isPartOf":{"@id":"https://kylegospodneti.ch/#website"},"datePublished":"2016-04-21T21:06:18+00:00","dateModified":"2020-11-14T21:26:07+00:00","description":"The postmortem story of City 17: Episode One. How we built the mod, how I improved the visuals of the Source Engine, and a look at the Source Code.","breadcrumb":{"@id":"https://kylegospodneti.ch/work/city17/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://kylegospodneti.ch/work/city17/"]}]},{"@type":"BreadcrumbList","@id":"https://kylegospodneti.ch/work/city17/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Resume","item":"https://kylegospodneti.ch/"},{"@type":"ListItem","position":2,"name":"My Work","item":"https://kylegospodneti.ch/work/"},{"@type":"ListItem","position":3,"name":"City 17: Episode One"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Kyle Gospodnetich &raquo; Feed" href="https://kylegospodneti.ch/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Kyle Gospodnetich &raquo; Comments Feed" href="https://kylegospodneti.ch/comments/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://kylegospodneti.ch/wp-includes/css/dist/block-library/style.min.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='https://kylegospodneti.ch/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.2.6' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='waves-css'  href='https://kylegospodneti.ch/wp-content/themes/gospo/assets/css/waves.min.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='toastify-css'  href='https://kylegospodneti.ch/wp-content/themes/gospo/assets/css/toastify.min.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-css'  href='https://kylegospodneti.ch/wp-content/themes/gospo/assets/css/custom.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css'  href='https://kylegospodneti.ch/wp-content/themes/gospo/assets/css/print.css?ver=5.8.8' type='text/css' media='print' />
+<link rel='stylesheet' id='fork-awesome-css'  href='https://kylegospodneti.ch/wp-content/themes/gospo/assets/css/fork-awesome.min.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='fork-awesome-compat-css'  href='https://kylegospodneti.ch/wp-content/themes/gospo/assets/css/v5-compat.min.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-delicious-font-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400%2C300%2C600%2C700%2C800&#038;ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-default-style-css'  href='https://kylegospodneti.ch/wp-content/themes/gospo/style.css?ver=5.8.8' type='text/css' media='all' />
+<style id='dt-default-style-inline-css' type='text/css'>
+div[class*="parallax-"] { background-attachment: initial !important; }
+html body {background: #efefef;}#wrapper {background: #ffffff;}#header {background: #ffffff;}#footer {background: #ffffff;}body { background: #efefef; }
+.single-post .page-title-subtitle { display: none; }.single-post .post-single { border-top: 1px solid #efefef; padding-top: 60px; }
+#header { padding-top: 25px; padding-bottom: 25px;  }
+</style>
+<link rel='stylesheet' id='dt-prettyphoto-lightbox-css'  href='https://kylegospodneti.ch/wp-content/themes/patti/css/prettyPhoto.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-superfish-css'  href='https://kylegospodneti.ch/wp-content/themes/patti/css/superfish.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-audioplayer-css'  href='https://kylegospodneti.ch/wp-content/themes/patti/css/audioplayer.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-owl-carousel-css'  href='https://kylegospodneti.ch/wp-content/themes/patti/css/owl.carousel.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='extend-composer-css'  href='https://kylegospodneti.ch/wp-content/themes/patti/css/extend-composer.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-responsive-css'  href='https://kylegospodneti.ch/wp-content/themes/patti/css/responsive.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-fluid-css'  href='https://kylegospodneti.ch/wp-content/themes/patti/css/fluid.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='dt-color-scheme-css'  href='https://kylegospodneti.ch/wp-content/themes/patti/css/color-schemes/blue.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='https://kylegospodneti.ch/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='bsf-Defaults-css'  href='https://kylegospodneti.ch/wp-content/uploads/smile_fonts/Defaults/Defaults.css?ver=5.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='ultimate-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato:regular,300,700&#038;subset=latin-ext,latin' type='text/css' media='all' />
+<link rel='stylesheet' id='ultimate-style-min-css'  href='https://kylegospodneti.ch/wp-content/plugins/Ultimate_VC_Addons/assets/min-css/ultimate.min.css?ver=3.18.0' type='text/css' media='all' />
+<link rel='stylesheet' id='redux-google-fonts-smof_data-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A300%2C700%7CLato%3A400%2C300%7CRoboto+Condensed%3A300%7CRoboto+Mono%3A400&#038;ver=1556777692' type='text/css' media='all' />
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.2.6' id='tp-tools-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.2.6' id='revmin-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/jquery.queryloader2.js?ver=1.0' id='dt-qloader-js'></script>
+<script type='text/javascript' id='dt-custom-loader-js-extra'>
+/* <![CDATA[ */
+var dt_loader = {"bcolor":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/custom/custom-loader.js?ver=1.0' id='dt-custom-loader-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/scripts-top.js?ver=5.8.8' id='dt-scripts-top-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/jquery.nav.js?ver=2.2.0' id='dt-nav-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/custom/custom-responsive-nav.js?ver=5.8.8' id='dt-custom-responsive-nav-js'></script>
+<script type='text/javascript' id='dt-custom-navscroll-js-extra'>
+/* <![CDATA[ */
+var dt_styles = {"header_bg":"255,255,255","header_scroll_opacity":"90","default_color":"#ffffff","logo_width":"100","logo_height":"35","init_pt":"25","init_pb":"25","scroll_pt":"10","scroll_pb":"10","scrolling_effect":"1","mainlogosrc":"","alternativelogosrc":"","alternativelogo":"0","svglogo":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/custom/custom-navscroll.js?ver=1.0' id='dt-custom-navscroll-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/plugins/Ultimate_VC_Addons/assets/min-js/ultimate.min.js?ver=3.18.0' id='ultimate-script-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/plugins/Ultimate_VC_Addons/assets/min-js/ultimate_bg.min.js?ver=5.8.8' id='ultimate-row-bg-js'></script>
+<link rel="https://api.w.org/" href="https://kylegospodneti.ch/wp-json/" /><link rel="alternate" type="application/json" href="https://kylegospodneti.ch/wp-json/wp/v2/pages/512" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://kylegospodneti.ch/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://kylegospodneti.ch/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.8.8" />
+<link rel='shortlink' href='https://kylegospodneti.ch/?p=512' />
+<link rel="alternate" type="application/json+oembed" href="https://kylegospodneti.ch/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkylegospodneti.ch%2Fwork%2Fcity17%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://kylegospodneti.ch/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkylegospodneti.ch%2Fwork%2Fcity17%2F&#038;format=xml" />
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://kylegospodneti.ch/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by Slider Revolution 5.2.6 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<style type="text/css" title="dynamic-css" class="options-output">html body{font-family:Roboto;line-height:24px;font-weight:300;font-style:normal;color:#686868;font-size:15px;}html ul#mainnav li a{font-family:Roboto;line-height:25px;font-weight:700;font-style:normal;color:#404040;font-size:14px;}.wrap ul.wrap-nav > li a{font-family:Lato;line-height:32px;font-weight:400;font-style:normal;color:#ffffff;font-size:28px;}html h1{font-family:Lato;line-height:36px;font-weight:300;font-style:normal;color:#444444;font-size:28px;}html h2{font-family:Lato;line-height:32px;font-weight:300;font-style:normal;color:#444444;font-size:24px;}html h3{font-family:Lato;line-height:24px;font-weight:300;font-style:normal;color:#444444;font-size:18px;}html h4{font-family:Lato;line-height:22px;font-weight:300;font-style:normal;color:#444444;font-size:16px;}html h5{font-family:"Roboto Condensed";line-height:20px;font-weight:300;font-style:normal;color:#444444;font-size:14px;}html h6{font-family:"Roboto Mono";line-height:20px;font-weight:400;font-style:normal;color:#444444;font-size:15px;}</style><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1461304156946{margin-bottom: 10px !important;}.vc_custom_1461309807082{margin-top: 10px !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>			
+
+	</head>
+	
+<body class="page-template page-template-template-homepage page-template-template-homepage-php page page-id-512 page-child parent-pageid-509 wpb-js-composer js-comp-ver-5.7 vc_responsive">
+
+	<!-- preloader-->
+	<div id="qLoverlay"></div>
+
+	
+	<header id="header" class="transparent-header">
+		<div class="centered-wrapper">
+
+	
+			<div class="percent-one-fourth no-fullscreen-menu">
+				<div class="logo">
+					<a href="https://kylegospodneti.ch/"><span class="logo-text">Kyle Gospodnetich</span></a>
+
+					<p id="breadcrumbs"><span><span><a href="https://kylegospodneti.ch/">Resume</a> › <span><a href="https://kylegospodneti.ch/work/">My Work</a> › <span class="breadcrumb_last" aria-current="page">City 17: Episode One</span></span></span></span></p>				</div><!--end logo-->
+			</div><!--end one-fourth-->
+			
+				
+						<a class="nav-btn "><i class="fa fa-bars"></i></a>
+			
+					
+
+			 
+
+			<div class="percent-three-fourth column-last">		
+
+				<div id="regular-navigation">
+					
+							<ul id="header-social">
+					<li><a href="/cdn-cgi/l/email-protection#016c64416a786d64666e72716e656f6475682f6269" title="Email Kyle Gospodnetich" class="email"><i class="fa fa-envelope"></i></a></li>
+					<li><a rel="me" target="_blank" href="https://mastodon.sdf.org/@kylegospo" title="Kyle Gospodnetich's Mastodon"><i class="fa fa-mastodon"></i></a></li>
+					<li><a rel="me" target="_blank" href="https://pixelfed.social/kylegospo" title="Kyle Gospodnetich's Pixelfed"><i class="fa fa-pixelfed"></i></a></li>
+					<li><a rel="me" target="_blank" href="https://copr.fedorainfracloud.org/coprs/kylegospo/" title="Kyle Gospodnetich's Fedora Copr"><img class="copr" src="https://kylegospodneti.ch/wp-content/themes/gospo/assets/images/copr.ico"/></a></li>
+					<li><a rel="me" target="_blank" href="https://github.com/KyleGospo" title="Kyle Gospodnetich's GitHub" class="github-alt"  target="_blank"><i class="fa fa-github-alt"></i></a></li><li><a rel="me" target="_blank" href="https://www.linkedin.com/in/kylegospo/" title="Kyle Gospodnetich's LinkedIn" class="linkedin"  target="_blank"><i class="fa fa-linkedin"></i></a></li>					<li class="print-page"><a href="javascript:window.print()" title="Print My Resume" class="print"><i class="fa fa-print"></i></a></li>
+				</ul>
+					
+
+											
+
+									<div class="flags_language_selector "></div>
+					
+	
+				</div>
+							
+
+				<nav id="navigation" class="light-header">
+					<div class="menu-main-menu-container"><ul id="mainnav" class="sf-menu"><li id="menu-item-461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-461"><a href="https://kylegospodneti.ch/">Resume</a></li>
+<li id="menu-item-514" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-514"><a href="https://kylegospodneti.ch/work/">Work</a>
+<ul class="sub-menu">
+	<li id="menu-item-1481" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1481"><a href="//kylegospodneti.ch/work/#bazzite">Bazzite</a></li>
+	<li id="menu-item-1124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1124"><a href="https://kylegospodneti.ch/work/magento/">Magento e-Commerce Sites</a></li>
+	<li id="menu-item-1123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1123"><a href="https://kylegospodneti.ch/work/wordpress/">WordPress Sites</a></li>
+	<li id="menu-item-1067" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1067"><a href="//kylegospodneti.ch/work/#consortium">CONSORTIUM</a></li>
+	<li id="menu-item-515" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-512 current_page_item menu-item-515"><a href="https://kylegospodneti.ch/work/city17/" aria-current="page">City 17: Episode One</a></li>
+</ul>
+</li>
+<li id="menu-item-637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-637"><a href="https://kylegospodneti.ch/hobbies/">Hobbies</a>
+<ul class="sub-menu">
+	<li id="menu-item-638" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-638"><a href="https://kylegospodneti.ch/hobbies/photography/">Photography</a></li>
+</ul>
+</li>
+</ul></div>				</nav><!--end navigation-->	
+
+			</div><!--end three-fourth-->
+			<div class="clear"></div>
+		</div><!--end centered-wrapper-->
+
+		
+	</header>		
+	
+	<div id="wrapper">	
+		
+	
+		
+		<section>
+			<article id="page-512" class="begin-content">
+				<section>
+					<div   class="vc_row wpb_row vc_row-fluid no-margin"  style=""  data-token="myW32"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="wpb_revslider_element wpb_content_element auto-height-slider">
+<div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullscreen-container" style="background-color:#666666;padding:0px;">
+<!-- START REVOLUTION SLIDER 5.2.6 fullscreen mode -->
+	<div id="rev_slider_1_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.2.6">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-9" data-transition="fadethroughtransparent" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Garage" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="https://kylegospodneti.ch/wp-content/plugins/revslider/admin/assets/images/dummy.png"  alt="" title="The underground garage"  width="1920" height="1080" data-lazyload="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_garage.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Zombie" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="https://kylegospodneti.ch/wp-content/plugins/revslider/admin/assets/images/dummy.png"  alt="" title="DOF effect during reload"  width="1280" height="720" data-lazyload="https://kylegospodneti.ch/wp-content/uploads/2016/04/comp_1.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-6" data-transition="fadethroughtransparent" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Fire" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="https://kylegospodneti.ch/wp-content/plugins/revslider/admin/assets/images/dummy.png"  alt="Particles, chromatic aberration, noise, and other screenspace effects combined" title="Particles, chromatic aberration, noise, and other screenspace effects combined"  width="1920" height="1080" data-lazyload="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0107.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-1" data-transition="crossfade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-delay="5000"  data-rotate="0"  data-saveperformance="off"  data-title="Underground" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="https://kylegospodneti.ch/wp-content/plugins/revslider/admin/assets/images/dummy.png"  alt="Motion Blur & Parallax Occlusion Mapping" title="Motion Blur &#038; Parallax Occlusion Mapping"  width="1280" height="720" data-lazyload="https://kylegospodneti.ch/wp-content/uploads/2016/04/running.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-7" data-transition="fadethroughtransparent" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Water" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="https://kylegospodneti.ch/wp-content/plugins/revslider/admin/assets/images/dummy.png"  alt="" title="c17_city_day_02b0012.2"  width="1920" height="1080" data-lazyload="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0012.2.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-8" data-transition="fadethroughtransparent" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Arena" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="https://kylegospodneti.ch/wp-content/plugins/revslider/admin/assets/images/dummy.png"  alt="" title="c17_city_day_02b0030"  width="1440" height="900" data-lazyload="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0030.jpg" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+	</li>
+</ul>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";
+				if(htmlDiv) {
+					htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+				}else{
+					var htmlDiv = document.createElement("div");
+					htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+					document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+				}
+			</script>
+		<script type="text/javascript">
+						/******************************************
+				-	PREPARE PLACEHOLDER FOR SLIDER	-
+			******************************************/
+
+			var setREVStartSize=function(){
+				try{var e=new Object,i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+					e.c = jQuery('#rev_slider_1_1');
+					e.gridwidth = [1240];
+					e.gridheight = [868];
+							
+					e.sliderLayout = "fullscreen";
+					e.fullScreenAutoWidth='off';
+					e.fullScreenAlignForce='off';
+					e.fullScreenOffsetContainer= '';
+					e.fullScreenOffset='';
+					if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})
+					
+				}catch(d){console.log("Failure at Presize of Slider:"+d)}
+			};
+			
+			setREVStartSize();
+			
+						var tpj=jQuery;
+			
+			var revapi1;
+			tpj(document).ready(function() {
+				if(tpj("#rev_slider_1_1").revolution == undefined){
+					revslider_showDoubleJqueryError("#rev_slider_1_1");
+				}else{
+					revapi1 = tpj("#rev_slider_1_1").show().revolution({
+						sliderType:"standard",
+jsFileLocation:"https://kylegospodneti.ch/wp-content/plugins/revslider/public/assets/js/",
+						sliderLayout:"fullscreen",
+						dottedOverlay:"none",
+						delay:9000,
+						navigation: {
+							onHoverStop:"off",
+						},
+						visibilityLevels:[1240,1024,778,480],
+						gridwidth:1240,
+						gridheight:868,
+						lazyType:"smart",
+						parallax: {
+							type:"mouse",
+							origo:"enterpoint",
+							speed:400,
+							levels:[5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
+							type:"mouse",
+							disable_onmobile:"on"
+						},
+						shadow:0,
+						spinner:"off",
+						stopLoop:"off",
+						stopAfterLoops:-1,
+						stopAtSlide:-1,
+						shuffle:"on",
+						autoHeight:"off",
+						fullScreenAutoWidth:"off",
+						fullScreenAlignForce:"off",
+						fullScreenOffsetContainer: "",
+						fullScreenOffset: "",
+						disableProgressBar:"on",
+						hideThumbsOnMobile:"off",
+						hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						debugMode:false,
+						fallbacks: {
+							simplifyAll:"on",
+							nextSlideOnWindowFocus:"off",
+							disableFocusListener:true,
+						}
+					});
+				}
+			});	/*ready*/
+		</script>
+		<script>
+					var htmlDivCss = unescape(".rev_slider%3Aafter%20%7B%0A%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20content%3A%20%22%22%3B%0A%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20left%3A%200%3B%0A%20%20%20%20top%3A%200%3B%0A%20%20%20%20z-index%3A%2099%3B%0A%20%20%20%20pointer-events%3A%20none%3B%0A%20%0A%20%20%20%20%2F%2A%20black%20overlay%20with%2050%25%20transparency%20%2A%2F%0A%20%20%20%20background%3A%20rgba%280%2C%200%2C%200%2C%200.5%29%3B%0A%7D");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}
+					else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				  </script></div><!-- END REVOLUTION SLIDER --></div></div></div></div></div><div   class="vc_row wpb_row vc_row-fluid no-margin  above-slider darker-overlay"  style=""  data-token="37VHC"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="ult-animation  ult-no-mobile " data-animate="fadeInDown" data-animation-delay="0" data-animation-duration="1" data-animation-iteration="1" style="" ><div class="vc_row wpb_row vc_inner vc_row-fluid auto-height-block vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div id="ultimate-heading-11016597b65b18866" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-11016597b65b18866 uvc-6045 " data-hspacer="line_only"  data-halign="center" style="text-align:center"><div class="uvc-main-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-11016597b65b18866 h2'  data-responsive-json-new='{"font-size":"desktop:60px;","line-height":"desktop:75px;"}' ><h2 style="font-family:&#039;Lato&#039;;font-weight:300;color:#ffffff;">City 17: Episode One</h2></div><div class="uvc-heading-spacer line_only" style="topheight:1px;"><span class="uvc-headings-line" style="border-style:solid;border-bottom-width:1px;border-color:#ffffff;width:600px;"></span></div><div class="uvc-sub-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-11016597b65b18866 .uvc-sub-heading '  data-responsive-json-new='{"font-size":"desktop:25px;","line-height":"desktop:40px;"}'  style="font-family:&#039;Lato&#039;;font-weight:300;color:#ffffff;">A modification for Valve Software&#8217;s Source Engine and a love letter to the modding community</div></div></div></div></div></div></div></div></div></div></div><div id="origins"  class="vc_row wpb_row vc_row-fluid no-margin"  style=""  data-token="eEExq"><div class=" vc_row-o-content-middle vc_row-flex" style="padding-top: 100px;padding-bottom: 50px; background-color: rgba(, 0.70);"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div id="ultimate-heading-79616597b65b19046" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-79616597b65b19046 uvc-7844 " data-hspacer="line_only"  data-halign="center" style="text-align:center"><div class="uvc-main-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-79616597b65b19046 h2'  data-responsive-json-new='{"font-size":"","line-height":""}' ><h2 style="font-family:&#039;Lato&#039;;font-weight:normal;">Origins &amp; Teamwork</h2></div><div class="uvc-heading-spacer line_only" style="margin-top:10px;margin-bottom:10px;height:1px;"><span class="uvc-headings-line" style="border-style:solid;border-bottom-width:1px;border-color:#ccc;width:300px;"></span></div></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p><strong>City 17 had humble beginnings.</strong> For me, it started as a conversation among friends about individual projects we had been working on and our sorrow over the then recently cancelled <a title="NightFall: Initiation on ModDB" href="http://www.moddb.com/mods/nightfall-initiation" target="_blank" rel="nofollow noopener noreferrer">NightFall: Initiation</a>, and quickly evolved into us forming a small but capable team. I had only begun toying with Valve&#8217;s Source Engine and SourceMods in general, but we were ready to jump in head first.</p>
+<p>Besides a few key members, our team size changed often. At our height we had eighteen people on the project including mappers, modelers, animators, voice actors, and a musician. At our lowest we had only myself and our project lead and head mapper, Cory De La Torre.</p>
+
+		</div>
+	</div>
+<div class="wpb_gallery wpb_content_element vc_clearfix" ><div class="wpb_wrapper"><div class="wpb_gallery_slides wpb_image_grid" data-interval="3"><ul class="wpb_image_grid_ul"><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/2826239995_99281ec092_b.jpg" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/2826239995_99281ec092_b-400x200.jpg" width="400" height="200" alt="City 17&#039;s Menu (2008)" title="City 17&#039;s Menu (2008)" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/2428888080_91732ff9a6.jpg" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/2428888080_91732ff9a6-400x200.jpg" width="400" height="200" alt="Calm Story Section" title="Calm Story Section" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/2428887928_3cef75508e.jpg" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/2428887928_3cef75508e-400x200.jpg" width="400" height="200" alt="Sniper Hallway" title="Sniper Hallway" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/Rebelzombie_test1.png" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/Rebelzombie_test1-400x200.png" width="400" height="200" alt="Rebel Zombie model" title="Rebel Zombie model" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/2011-1-21-1.jpg" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/2011-1-21-1-400x200.jpg" width="400" height="200" alt="One of the original storyboards" title="One of the original storyboards" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/05/Projected_Test.jpg" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/05/Projected_Test-400x200.jpg" width="400" height="200" alt="Early dynamic shadow test" title="Early dynamic shadow test" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0044.1-1030x644.jpg" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0044.1-400x200.jpg" width="400" height="200" alt="An area that would later become the burning building section of the campaign" title="An area that would later become the burning building section of the campaign" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0042.2-1030x644.jpg" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0042.2-400x200.jpg" width="400" height="200" alt="First arena of the game" title="First arena of the game" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040037-1030x644.jpg" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040037-400x200.jpg" width="400" height="200" alt="Return to the underground" title="Return to the underground" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040029.2-1030x644.jpg" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040029.2-400x200.jpg" width="400" height="200" alt="An area that would later become the burning building section of the campaign" title="An area that would later become the burning building section of the campaign" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040040-1030x644.jpg" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040040-400x200.jpg" width="400" height="200" alt="An early bridge section with your NPC companion, Michael" title="An early bridge section with your NPC companion, Michael" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0041.1-1030x644.jpg" data-rel="prettyPhoto[rel-512-841757786]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0041.1-400x200.jpg" width="400" height="200" alt="Collapsed Strider" title="Collapsed Strider" /></a></li></ul></div></div></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>&#8220;Work hours&#8221; on a community game project are always an interesting proposition. Cory and myself had the spare time to treat our project like a full time job. Others had understandably far more limited time, and others still were in completely different time zones. Very few of the people in our team were based out of the United States. Learning to get around these limitations and still make reasonable progress each week took a lot of trial and error, but we eventually found a workflow and task management solution that kept us all in sync.</p>
+<p>We formed our group known then as GearDev Studios and spent our first 8 months working solely on gameplay, storyboarding, play testing, and polishing maps we already had working. Afterwards, we were ready to show what we had done to the public and the next chapter of our project began.</p>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div><div class="clear"></div></div></div><div   class="vc_row wpb_row vc_row-fluid no-margin parallax-bag-fcd" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_050021-1.jpg" style="background-image: url(https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_050021-1.jpg);"  data-token="io2Xr"><div class="darker-overlay vc_row-o-content-middle vc_row-flex" style="padding-top: 50px;padding-bottom: 50px; background-color: rgba(0,0,0, 0.60);"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 40px" ><span class="vc_empty_space_inner"></span></div>
+<h2 class="parallax-quote">"This is without doubt one of the best mods I have ever played, even in its unfinished state."</h2><span class="quote-author">Planet Phillip, 2008</span><div class="vc_empty_space"   style="height: 40px" ><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div></div></div></div><div class="clear"></div></div></div><div id="shaders"  class="vc_row wpb_row vc_row-fluid no-margin"  style=""  data-token="iDfWr"><div class=" vc_row-o-content-middle vc_row-flex" style="padding-top: 50px;padding-bottom: 50px; background-color: rgba(, 0.70);"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div id="ultimate-heading-83216597b65b1c171" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-83216597b65b1c171 uvc-7059 " data-hspacer="line_only"  data-halign="center" style="text-align:center"><div class="uvc-main-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-83216597b65b1c171 h2'  data-responsive-json-new='{"font-size":"","line-height":""}' ><h2 style="font-family:&#039;Lato&#039;;font-weight:normal;">Expanding the Source Engine</h2></div><div class="uvc-heading-spacer line_only" style="margin-top:10px;margin-bottom:10px;height:1px;"><span class="uvc-headings-line" style="border-style:solid;border-bottom-width:1px;border-color:#ccc;width:300px;"></span></div></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>At the time we began this project, the Source Engine was already beginning to show its age. We had spent a solid year working on gameplay, levels, and AI adjustments; all the while watching the game industry move ever forward, delivering beautiful and cinematic experiences that we could only hope to emulate. It was at this time we decided to take City 17 in a new direction and focus for a while on just what kind of life we could pump into the Source Engine.</p>
+<p>At first we focused on things that Valve Software had already done in their other games but hadn&#8217;t released to the public; such as cinematic physics, improved particle effects, use of real-time shadows in more locations, and improved textures with phong lighting and SSbumps. Eventually, we reached the point that any other improvement we wanted to do couldn&#8217;t be done with the tools we had in front of us and we set out to add new shaders and effects to the game.</p>
+<p>In many ways, this was trial by fire for me. The documentation for the shader system in the Source Engine was nearly non-existent, and very few people in the community had even dabbled in it. Most of my nights were spent looking at old comments, broken links, and the ever-present years old &#8220;I fixed it!&#8221; post with no explanation or replies.</p>
+<p>My first breakthrough was getting a modified copy of Valve&#8217;s VertexLitGeneric shader to compile. After that, the sky was the limit.</p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="customlist list-icon-fa-check-circle"></p>
+<h2>Added &amp; Modified Shaders</h2>
+<ul class="group-list">
+<li>Crepuscular Rays</li>
+<li>Dynamic Skydomes</li>
+<li>Phong shading on lightmapped surfaces</li>
+<li>Chromatic Aberration</li>
+<li>Static/Noise &amp; Vignetting</li>
+<li>Bloom Buffer Lens Flares</li>
+<li>Approximated Subsurface Scattered Skin</li>
+<li>Minnaert Cloth Shader</li>
+<li>Unsharp Blur</li>
+<li>Improved PCF shadow filtering</li>
+<li>Bokeh DOF</li>
+<li>Vertex Animated Trees</li>
+<li>FXAA &amp; SMAA</li>
+<li>4-Way Blend Lightmapped Surfaces</li>
+<li>And various other object and screenspace shaders</li>
+</ul>
+<p></div><div class="wpb_gallery wpb_content_element vc_clearfix" ><div class="wpb_wrapper"><div class="wpb_gallery_slides wpb_image_grid" data-interval="3"><ul class="wpb_image_grid_ul"><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/sun_shafts2-1030x579.jpg" data-rel="prettyPhoto[rel-512-372492825]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/sun_shafts2-400x200.jpg" width="400" height="200" alt="Sun Shafts" title="Sun Shafts" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0107-1030x579.jpg" data-rel="prettyPhoto[rel-512-372492825]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0107-400x200.jpg" width="400" height="200" alt="Particles, chromatic aberration, noise, and other screenspace effects combined" title="Particles, chromatic aberration, noise, and other screenspace effects combined" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/05/bokeh-1030x579.jpg" data-rel="prettyPhoto[rel-512-372492825]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/05/bokeh-400x200.jpg" width="400" height="200" alt="Bokeh DOF test in one of Valve&#039;s maps from Portal 2" title="Bokeh DOF test in one of Valve&#039;s maps from Portal 2" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/skin_shader-1030x579.jpg" data-rel="prettyPhoto[rel-512-372492825]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/skin_shader-400x200.jpg" width="400" height="200" alt="Approximated subsurface scattered skin and minnaert cloth shader" title="Approximated subsurface scattered skin and minnaert cloth shader" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/sun_sky-1030x579.jpg" data-rel="prettyPhoto[rel-512-372492825]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/sun_sky-400x200.jpg" width="400" height="200" alt="Skydome Shader configured for an in-space appearance" title="Skydome Shader configured for an in-space appearance" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/night_sky-1030x579.jpg" data-rel="prettyPhoto[rel-512-372492825]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/night_sky-400x200.jpg" width="400" height="200" alt="Skydome Shader configured for a night sky appearance" title="Skydome Shader configured for a night sky appearance" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/parallax-1030x579.jpg" data-rel="prettyPhoto[rel-512-372492825]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/parallax-400x200.jpg" width="400" height="200" alt="Parallax Occlusion Mapping" title="Parallax Occlusion Mapping" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/lens_flares-1030x579.jpg" data-rel="prettyPhoto[rel-512-372492825]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/lens_flares-400x200.jpg" width="400" height="200" alt="Lens flares from the bloom buffer" title="Lens flares from the bloom buffer" /></a></li></ul></div></div></div></div></div></div></div></div></div></div><div class="clear"></div></div></div><div id="moty2011"  class="vc_row wpb_row vc_row-fluid no-margin"  style=""  data-token="3x5v1"><div class=" vc_row-o-content-middle vc_row-flex" style="padding-top: 50px;padding-bottom: 50px; background-color: rgba(, 0.70);"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div id="ultimate-heading-66686597b65b1de3f" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-66686597b65b1de3f uvc-302 " data-hspacer="line_only"  data-halign="center" style="text-align:center"><div class="uvc-main-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-66686597b65b1de3f h2'  data-responsive-json-new='{"font-size":"","line-height":""}' ><h2 style="font-family:&#039;Lato&#039;;font-weight:normal;">``Is it playable?`` &amp; ModDB MOTY 2011</h2></div><div class="uvc-heading-spacer line_only" style="margin-top:10px;margin-bottom:10px;height:1px;"><span class="uvc-headings-line" style="border-style:solid;border-bottom-width:1px;border-color:#ccc;width:300px;"></span></div></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>At the beginning of 2011 we finally began winding down on our engine enhancements, and once again turned our focus on City 17 as a game. We had spent over a year and a half focusing on expanding nearly everything we could; partly for City 17, and partly for the prospects of releasing our complete Source Code along with our game to hopefully serve as a new base for SourceMods and help the modding community.</p>
+<p>By this point many of our maps had changed to be unrecognizable from what they once were, and a number of them had completely different order in the level progression. Most of these changes were made to directly improve gameplay; but they had created a greater need for us to finalize the story, complete voice acting for our characters and their accompanying animations and scenes, and finish our <em>(admittedly)</em> over-ambitious ending battle.</p>
+
+		</div>
+	</div>
+
+	<div  class="wpb_single_image wpb_content_element vc_align_left   image-float-left image-small-mobile">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<a data-rel="prettyPhoto[rel-512-1244129143]" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/crabsynth2-1030x579.jpg" target="_self" class="vc_single_image-wrapper vc_box_rounded  vc_box_border_grey prettyphoto"><img class="vc_single_image-img " src="https://kylegospodneti.ch/wp-content/uploads/2016/04/crabsynth2-200x200.jpg" width="200" height="200" alt="The Crabsynth" title="The Crabsynth" /></a><figcaption class="vc_figure-caption">The Crabsynth</figcaption>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>We immediately asked our closest friends if they would be willing to help with voice acting and put out a casting call on ModDB for anyone else we could get. Meanwhile, we had an ending to finalize. We looked toward Valve Software, as we often did while building anything for our game, and found our ending battle in the unused Crabsyth enemy shown during the ending portion of Half-Life 2. Our weapon of choice to fight this monster came naturally from the concept of the Super Gravity Gun in Half-Life 2, and a left over weapon in Half-Life 2: Episode One. During the ending stages of City 17 you were meant to run into a forcefield stopping your railroad escape from the city, forcing you to shut off a power station resembling a very downscaled Citadel core. Doing so would upgrade your AR2 rifle to an incredibly unstable variant, and attract the Crabsynth to your location. This enemy would serve as a bulletproof tank, forcing you to kill it using your new weapon and hazards in the environment. Eventually your attacks would cause the enemy to flip over and give you a chance to deal the final blow, allowing you to board your train and ride out of City 17.</p>
+
+		</div>
+	</div>
+<div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey" ><span class="vc_sep_holder vc_sep_holder_l"><span  class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span  class="vc_sep_line"></span></span>
+</div>
+	<div  class="wpb_single_image wpb_content_element vc_align_right   image-float-right image-small-mobile">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="https://kylegospodneti.ch/wp-content/uploads/2016/04/moty-home-200x200.png" width="200" height="200" alt="ModDB Mod Of The Year 2011" title="ModDB Mod Of The Year 2011" /></div>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>In the middle of all of this we had ModDB&#8217;s mod of the year competition to plan for. In the past we had released small updates or videos during this time. This year we decided would be different. We had enough content complete that a trailer showing areas from the first 3 chapters of our 6 chapter game was feasible. This allowed us to create a full week-long media release culminating in that trailer.</p>
+<p><a title="ModDB MOTY Player's Choice Upcoming 2011" href="http://www.moddb.com/groups/2011-mod-of-the-year-awards/features/moty-players-choice-upcoming" target="_blank" rel="noopener noreferrer">It was this year that we were voted by the community to be in the top 5 upcoming mods of the year.</a></p>
+<p>It&#8217;s something we&#8217;re all proud of to this day, and we can&#8217;t thank the people that voted for us enough for this honor. We came out of 2011 with the motivation we needed to complete the year of work we knew we still had ahead of us as we planned for a Q4 2012 release.</p>
+
+		</div>
+	</div>
+<div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey" ><span class="vc_sep_holder vc_sep_holder_l"><span  class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span  class="vc_sep_line"></span></span>
+</div><div class="wpb_gallery wpb_content_element vc_clearfix" ><div class="wpb_wrapper"><div class="wpb_gallery_slides wpb_image_grid" data-interval="3"><ul class="wpb_image_grid_ul"><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/2011-09-18_00004-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/2011-09-18_00004-400x200.jpg" width="400" height="200" alt="2011-09-18_00004" title="2011-09-18_00004" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/comp_1-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/comp_1-400x200.jpg" width="400" height="200" alt="DOF effect during reload" title="DOF effect during reload" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17cityday03new0018-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17cityday03new0018-400x200.jpg" width="400" height="200" alt="c17cityday03new0018" title="c17cityday03new0018" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0107-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0107-400x200.jpg" width="400" height="200" alt="Particles, chromatic aberration, noise, and other screenspace effects combined" title="Particles, chromatic aberration, noise, and other screenspace effects combined" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0007-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0007-400x200.jpg" width="400" height="200" alt="c17_city_day_02b0007" title="c17_city_day_02b0007" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/Striders.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/Striders-400x200.jpg" width="400" height="200" alt="Striders" title="Striders" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/Underground-Parking-Garage-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/Underground-Parking-Garage-400x200.jpg" width="400" height="200" alt="Underground Parking Garage" title="Underground Parking Garage" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_050021-1-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_050021-1-400x200.jpg" width="400" height="200" alt="c17_city_day_050021" title="c17_city_day_050021" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0008-1030x644.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0008-400x200.jpg" width="400" height="200" alt="The beginning of our flaming building section" title="The beginning of our flaming building section" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/motionblur_01-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/motionblur_01-400x200.jpg" width="400" height="200" alt="motionblur_01" title="motionblur_01" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040015-1-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040015-1-400x200.jpg" width="400" height="200" alt="c17_city_day_040015" title="c17_city_day_040015" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/2012-01-23_00002.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/2012-01-23_00002-400x200.jpg" width="400" height="200" alt="2012-01-23_00002" title="2012-01-23_00002" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/running-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/running-400x200.jpg" width="400" height="200" alt="Motion Blur &amp; Parallax Occlusion Mapping" title="Motion Blur &amp; Parallax Occlusion Mapping" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_03new0003-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_03new0003-400x200.jpg" width="400" height="200" alt="c17_city_day_03new0003" title="c17_city_day_03new0003" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/09/c17_city_day_03new0057-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/09/c17_city_day_03new0057-400x200.jpg" width="400" height="200" alt="c17_city_day_03new0057" title="c17_city_day_03new0057" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/2011-11-09_00006-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/2011-11-09_00006-400x200.jpg" width="400" height="200" alt="2011-11-09_00006" title="2011-11-09_00006" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0030-1030x644.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0030-400x200.jpg" width="400" height="200" alt="c17_city_day_02b0030" title="c17_city_day_02b0030" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040014-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040014-400x200.jpg" width="400" height="200" alt="c17_city_day_040014" title="c17_city_day_040014" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_03new0000-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_03new0000-400x200.jpg" width="400" height="200" alt="c17_city_day_03new0000" title="c17_city_day_03new0000" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040013-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040013-400x200.jpg" width="400" height="200" alt="c17_city_day_040013" title="c17_city_day_040013" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/turret-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/turret-400x200.jpg" width="400" height="200" alt="turret" title="turret" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/02b_day2a-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/02b_day2a-400x200.jpg" width="400" height="200" alt="02b_day2a" title="02b_day2a" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_050024-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_050024-400x200.jpg" width="400" height="200" alt="c17_city_day_050024" title="c17_city_day_050024" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040015-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040015-400x200.jpg" width="400" height="200" alt="c17_city_day_040015" title="c17_city_day_040015" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0019.1-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0019.1-400x200.jpg" width="400" height="200" alt="c17_city_day_02b0019.1" title="c17_city_day_02b0019.1" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0012.2-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0012.2-400x200.jpg" width="400" height="200" alt="c17_city_day_02b0012.2" title="c17_city_day_02b0012.2" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040027.1-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_040027.1-400x200.jpg" width="400" height="200" alt="c17_city_day_040027.1" title="c17_city_day_040027.1" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/04/Looming-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/Looming-400x200.jpg" width="400" height="200" alt="Looming" title="Looming" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/09/c17_city_day_02b0073-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/09/c17_city_day_02b0073-400x200.jpg" width="400" height="200" alt="c17_city_day_02b0073" title="c17_city_day_02b0073" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/09/c17_city_day_02b0108-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/09/c17_city_day_02b0108-400x200.jpg" width="400" height="200" alt="c17_city_day_02b0108" title="c17_city_day_02b0108" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/09/c17cityday03new0026-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/09/c17cityday03new0026-400x200.jpg" width="400" height="200" alt="c17cityday03new0026" title="c17cityday03new0026" /></a></li><li class="isotope-item"><a class="prettyphoto" href="https://kylegospodneti.ch/wp-content/uploads/2016/05/scopes-1030x579.jpg" data-rel="prettyPhoto[rel-512-5313907]"><img class="" src="https://kylegospodneti.ch/wp-content/uploads/2016/05/scopes-400x200.jpg" width="400" height="200" alt="scopes" title="scopes" /></a></li></ul></div></div></div></div></div></div></div></div></div></div><div class="clear"></div></div></div><div id="end"  class="vc_row wpb_row vc_row-fluid no-margin"  style=""  data-token="TxWSS"><div class=" vc_row-o-content-middle vc_row-flex" style="padding-top: 50px;padding-bottom: 100px; background-color: rgba(, 0.70);"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div id="ultimate-heading-11876597b65b238bf" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-11876597b65b238bf uvc-8654 " data-hspacer="line_only"  data-halign="center" style="text-align:center"><div class="uvc-main-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-11876597b65b238bf h2'  data-responsive-json-new='{"font-size":"","line-height":""}' ><h2 style="font-family:&#039;Lato&#039;;font-weight:normal;">The End &amp; Lessons Learned</h2></div><div class="uvc-heading-spacer line_only" style="margin-top:10px;margin-bottom:10px;height:1px;"><span class="uvc-headings-line" style="border-style:solid;border-bottom-width:1px;border-color:#ccc;width:300px;"></span></div></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>In the months after our mod of the year victory things began to get tough for our team. We had found that our casting calls for voice actors simply didn&#8217;t produce enough of them, and at the rate we were going the mod would need to be delayed at least an additional year to finish the scenes and random bits of dialog we had planned. Worst of all, the classic problems with money and growing up had begun to occur. Many of us were young and still in high school when City 17 was first conceived, and we had worked on our project for upwards of 5 years purely out of passion without accepting donations of any kind. I was dedicating a majority of my free time to helping my father battle through complications of his brittle diabetes, and all of us were growing older and taking on new responsibilities. Our free time collectively dwindled. Parts of our team would join and leave various different indie projects while others would simply disappear as the year went on.</p>
+<p>City 17 was done, and it would go quietly.</p>
+<p>Unfortunately problems like these are a fact of life for those in the modding community. Sometimes the more passion you have for something the more likely you are to cause its downfall.</p>
+
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 32px" ><span class="vc_empty_space_inner"></span></div>
+<div id="ultimate-heading-95506597b65b23dbd" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-95506597b65b23dbd uvc-578 " data-hspacer="no_spacer"  data-halign="left" style="text-align:left"><div class="uvc-heading-spacer no_spacer" style="top"></div><div class="uvc-main-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-95506597b65b23dbd h3'  data-responsive-json-new='{"font-size":"desktop:22px;","line-height":"desktop:25px;"}' ><h3 style="font-family:&#039;Lato&#039;;font-weight:normal;">Here are a couple of the lessons we learned while building City 17:</h3></div></div><div class="vc_empty_space"   style="height: 32px" ><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><div id="ultimate-heading-2896597b65b24120" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-2896597b65b24120 uvc-757 " data-hspacer="no_spacer"  data-halign="left" style="text-align:left"><div class="uvc-heading-spacer no_spacer" style="top"></div><div class="uvc-main-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-2896597b65b24120 h3'  data-responsive-json-new='{"font-size":"","line-height":""}' ><h3 style="font-family:&#039;Lato&#039;;font-weight:normal;">Feature Creep</h3></div></div><div class="vc_empty_space"   style="height: 5px" ><span class="vc_empty_space_inner"></span></div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>Any project of considerable size has the opportunity for feature creep. Worse, doing a project for free and out of passion with no real leadership above you makes this problem into a daily battle. When our team decided to use our work to help the modding community as a whole we fell deep into that trap. We would regularly add features to our game if we felt they could be of use to <em>someone</em>, even if our game would never actually make use of them. We similarly had the same problem during regular development. The ending of City 17 changed on four separate occasions, each time growing larger in scale.<br />
+Avoiding the trap of feature creep can be done with the right leadership and discipline. Even if you&#8217;re making a game for free in your spare time you can&#8217;t lose sight of the finish line. Start small doing what you know you and your team can. If you grow beyond your original plans, focus instead on finishing what you originally started before moving on to polishing or adding new features. This way even if you burn out later in development you still have an entire game start to finish to show for your work.</p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><div id="ultimate-heading-60296597b65b243b4" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-60296597b65b243b4 uvc-5935 " data-hspacer="no_spacer"  data-halign="left" style="text-align:left"><div class="uvc-heading-spacer no_spacer" style="top"></div><div class="uvc-main-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-60296597b65b243b4 h3'  data-responsive-json-new='{"font-size":"","line-height":""}' ><h3 style="font-family:&#039;Lato&#039;;font-weight:normal;">Setting Goals</h3></div></div><div class="vc_empty_space"   style="height: 5px" ><span class="vc_empty_space_inner"></span></div>
+
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<p>One of the best things you can do for yourself and anyone you&#8217;re working with is to be thorough in your plans. Figuring out everything you need to do to get from point A to point B and having your goals, time frames, and potential challenges outlined ahead of time not only makes your daily work easier, it also helps to keep you on the right track to have your project completed on-time.</p>
+<p>Invest in a project management system straight away. Some great ones to note are <a href="https://www.atlassian.com/software/jira" target="_blank" rel="nofollow noopener noreferrer">JIRA by Atlassian</a> and <a href="https://trello.com/" target="_blank" rel="nofollow noopener noreferrer">Trello</a>. These tools are immensely useful for both single and group projects.</p>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div><div class="clear"></div></div></div><div   class="vc_row wpb_row vc_row-fluid no-margin parallax-bag-eca" src="https://kylegospodneti.ch/wp-content/uploads/2016/09/c17_city_day_02b0108.jpg" style="background-image: url(https://kylegospodneti.ch/wp-content/uploads/2016/09/c17_city_day_02b0108.jpg);"  data-token="5P0a2"><div class="darker-overlay vc_row-o-content-middle vc_row-flex" style="padding-top: 50px;padding-bottom: 50px; background-color: rgba(0,0,0, 0.60);"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 40px" ><span class="vc_empty_space_inner"></span></div>
+<div id="ultimate-heading-41606597b65b24b85" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-41606597b65b24b85 uvc-4373 " data-hspacer="no_spacer"  data-halign="center" style="text-align:center"><div class="uvc-heading-spacer no_spacer" style="top"></div><div class="uvc-main-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-41606597b65b24b85 h2'  data-responsive-json-new='{"font-size":"desktop:17px;","line-height":"desktop:25px;"}' ><h2 style="font-family:&#039;Lato&#039;;font-weight:normal;font-style:normal;">Finally, I personally want to say thank you to everyone who supported us and this project over the years, and thank you to everyone who considered themselves a part of GearDev Studios. None of this could have been done without each and every single one of you, and I'm proud of what we were able to build with the time that we had together.</h2></div></div><div class="vc_empty_space"   style="height: 40px" ><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div></div></div></div><div class="clear"></div></div></div><div id="thanks"  class="vc_row wpb_row vc_row-fluid no-margin"  style=""  data-token="mVNud"><div class=" vc_row-o-content-middle vc_row-flex" style="padding-top: 50px;padding-bottom: 100px; background-color: rgba(, 0.70);"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<h2><a href="https://www.youtube.com/watch?v=W2TE0DjdNqI" target="_blank" rel="nofollow" class="hidden-link">GearDev Studios Was:</a></h2>
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element  customlist" >
+		<div class="wpb_wrapper">
+			<ul class="group-list">
+<li><a href="http://steamcommunity.com/id/mrtwovideocards" target="_blank" rel="nofollow noopener noreferrer">Cory De La Torre <em>(MrTwoVideoCards)</em></a></li>
+<li><a href="http://steamcommunity.com/id/onequarterlife" target="_blank" rel="noopener noreferrer">Kyle Gospodnetich <em>(1/4 Life)</em></a></li>
+<li><a href="http://steamcommunity.com/id/Zipfinator" target="_blank" rel="nofollow noopener noreferrer">Kiefen Zipf <em>(Zipfinator)</em></a></li>
+<li><a href="http://steamcommunity.com/id/samuelgames/" target="_blank" rel="nofollow noopener noreferrer">Sam Pavlovic <em>(Sam Za Nemesis)</em></a></li>
+<li><a href="http://steamcommunity.com/id/sortie" target="_blank" rel="nofollow noopener noreferrer">Jonas Termansen <em>(Sortie)</em></a></li>
+<li><a href="http://steamcommunity.com/id/mrhappy" target="_blank" rel="nofollow noopener noreferrer">Jamie Lea <em>(Mr. Happy)</em></a></li>
+<li><a href="http://steamcommunity.com/id/mess" target="_blank" rel="nofollow noopener noreferrer">Adam Coltman <em>(Mess)</em></a></li>
+<li><a href="http://steamcommunity.com/profiles/76561197960359087/" target="_blank" rel="nofollow noopener noreferrer">Daniel Kershaw <em>(Dogger)</em></a></li>
+<li><a href="http://steamcommunity.com/id/explosions/" target="_blank" rel="nofollow noopener noreferrer">Nick Seavert <em>(Jangalomph)</em></a></li>
+<li><a href="http://steamcommunity.com/id/jaanimated/" target="_blank" rel="nofollow noopener noreferrer">Javid Ali <em>(Sn1pe)</em></a></li>
+<li><a href="http://steamcommunity.com/profiles/76561197984029362/" target="_blank" rel="nofollow noopener noreferrer">Kyle Bloss <em>(PelPix)</em></a></li>
+<li><a href="http://steamcommunity.com/id/kgwhipp" target="_blank" rel="nofollow noopener noreferrer">Kevin Whipp <em>(KG)</em></a></li>
+<li><a href="http://steamcommunity.com/id/Vessboy" target="_blank" rel="nofollow noopener noreferrer">Nathan Vess <em>(Vess)</em></a></li>
+<li><a href="http://steamcommunity.com/id/fps_noobkiller" target="_blank" rel="nofollow noopener noreferrer">Hugh Russell <em>(fps_noobkiller)</em></a></li>
+<li><a href="http://steamcommunity.com/id/dabigman" target="_blank" rel="nofollow noopener noreferrer">Zacharrias Quinten <em>(Da Big Man)</em></a></li>
+<li><a href="http://steamcommunity.com/id/diwako" target="_blank" rel="nofollow noopener noreferrer">Kilian Groß <em>(diwako)</em></a></li>
+<li><a href="http://steamcommunity.com/id/mm3guy" target="_blank" rel="nofollow noopener noreferrer">Ian <em>(mm3guy)</em></a></li>
+<li><a href="http://steamcommunity.com/id/MaxOfS2D/" target="_blank" rel="nofollow noopener noreferrer">Maxime Lebled <em>(MaxOfS2D)</em></a></li>
+</ul>
+
+		</div>
+	</div>
+<div id="ultimate-heading-8986597b65b25276" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-8986597b65b25276 uvc-8121 " data-hspacer="no_spacer"  data-halign="left" style="text-align:left"><div class="uvc-heading-spacer no_spacer" style="top"></div><div class="uvc-main-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-8986597b65b25276 h2'  data-responsive-json-new='{"font-size":"","line-height":""}' ><h2 style="font-family:&#039;Lato&#039;;font-weight:normal;">Special Thanks:</h2></div></div>
+	<div class="wpb_text_column wpb_content_element  customlist" >
+		<div class="wpb_wrapper">
+			<ul class="group-list">
+<li><a href="http://steamcommunity.com/id/kremator/" target="_blank" rel="nofollow noopener noreferrer">Taychin Dunnvatanachit <em>(Kremator)</em></a></li>
+<li><a href="http://steamcommunity.com/id/biohazard/" target="_blank" rel="nofollow noopener noreferrer">Biohazard</a></li>
+<li><a href="http://steamcommunity.com/id/planetphillip" target="_blank" rel="nofollow noopener noreferrer">PlanetPhillip</a></li>
+<li><a href="http://steamcommunity.com/id/leoleonidas1" target="_blank" rel="nofollow noopener noreferrer">Leonard Polus <em>(Leo Leonidas)</em></a></li>
+<li>David Michael Zander <em>(Edli)</em></li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div><div class="clear"></div></div></div><div id="source"  class="vc_row wpb_row vc_row-fluid no-margin  center parallax-bag-bae" src="https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0008.jpg" style="background-image: url(https://kylegospodneti.ch/wp-content/uploads/2016/04/c17_city_day_02b0008.jpg);"  data-token="6kSI0"><div class="darker-overlay vc_row-o-content-middle vc_row-flex" style="padding-top: 100px;padding-bottom: 100px; background-color: rgba(0,0,0, 0.70);"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 30px" ><span class="vc_empty_space_inner"></span></div>
+<div 	class="vc_icon_element vc_icon_element-outer vc_custom_1461304156946 wpb_animate_when_almost_visible wpb_appear appear vc_icon_element-align-center">
+	<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-size-xl vc_icon_element-style- vc_icon_element-background-color-grey">
+		<span class="vc_icon_element-icon fa fa-heart" ></span></div>
+</div>
+<div id="ultimate-heading-22246597b65b25898" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-22246597b65b25898 uvc-364 " data-hspacer="no_spacer"  data-halign="center" style="text-align:center"><div class="uvc-heading-spacer no_spacer" style="top"></div><div class="uvc-main-heading ult-responsive"  data-ultimate-target='.uvc-heading.ultimate-heading-22246597b65b25898 h2'  data-responsive-json-new='{"font-size":"desktop:30px;","line-height":"desktop:30px;"}' ><h2 style="font-family:&#039;Lato&#039;;font-weight:700;color:#ffffff;">Get the Source Code</h2></div></div>
+	<div class="wpb_text_column wpb_content_element  vc_custom_1461309807082 center-small" >
+		<div class="wpb_wrapper">
+			<p><span style="font-size: 16px;">The complete source code is now available. Feel free to check it out, or use it to better your own free Source Engine modifications.</span></p>
+
+		</div>
+	</div>
+<div class="vc_btn3-container  button-float vc_btn3-inline" >
+	<a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-icon-right vc_btn3-color-warning" href="https://github.com/KyleGospo/City-17-Episode-One-Source" title="View on GitHub" target="_blank">View on GitHub <i class="vc_btn3-icon fa fa-github"></i></a></div>
+
+	<div class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_bottom-to-top bottom-to-top" >
+		<div class="wpb_wrapper">
+			<h5 class="source-helped">Did this help your SourceMod project? <a title="Email Kyle Gospodnetich" href="/cdn-cgi/l/email-protection#68050d280311040d0f071b18070c060d1c01460b00">Email me</a> if you&#8217;d like your mod mentioned here.</h5>
+
+		</div>
+	</div>
+</div></div></div></div></div></div></div><div class="clear"></div></div></div><div   class="vc_row wpb_row vc_row-fluid"  style=""  data-token="mbrXq"><div class=" vc_row-o-content-middle vc_row-flex" style="padding-top: 75px; background-color: rgba(, 0.70);"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div  class="wpb_single_image wpb_content_element vc_align_center  wpb_animate_when_almost_visible wpb_fadeIn fadeIn">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper vc_box_shadow_circle  vc_box_border_grey"><img class="vc_single_image-img " src="https://kylegospodneti.ch/wp-content/uploads/2016/04/image-250x250.png" width="250" height="250" alt="wow interesting" title="wow interesting" /></div>
+		</figure>
+	</div>
+</div></div></div></div></div></div></div><div class="clear"></div></div></div>
+				</section>
+			</article>
+		</section>
+
+	
+	
+
+
+	<footer id="footer">		
+	
+		<div class="centered-wrapper">
+			
+	
+		</div><!--end centered-wrapper-->
+		
+		
+		<div id="bottomfooter"  >		
+			<div class="centered-wrapper">	
+				<div class="column-last">
+					<ul id="social">
+						<li><a href="/cdn-cgi/l/email-protection#7f121a3f1406131a18100c0f101b111a0b16511c17" title="Email Kyle Gospodnetich" class="email"><i class="fa fa-envelope"></i></a></li>
+						<li><a rel="me" target="_blank"  href="https://mastodon.sdf.org/@kylegospo" title="Kyle Gospodnetich's Mastodon"><i class="fa fa-mastodon"></i></a></li>
+						<li><a rel="me" target="_blank" href="https://pixelfed.social/kylegospo" title="Kyle Gospodnetich's Pixelfed"><i class="fa fa-pixelfed"></i></a></li>
+						<li><a rel="me" target="_blank" href="https://copr.fedorainfracloud.org/coprs/kylegospo/" title="Kyle Gospodnetich's Fedora Copr"><img class="copr" src="https://kylegospodneti.ch/wp-content/themes/gospo/assets/images/copr.ico"/></a></li>
+						<li><a rel="me" target="_blank" href="https://github.com/KyleGospo" title="Kyle Gospodnetich's GitHub" class="github-alt"  target="_blank"><i class="fa fa-github-alt"></i></a></li><li><a rel="me" target="_blank" href="https://www.linkedin.com/in/kylegospo/" title="Kyle Gospodnetich's LinkedIn" class="linkedin"  target="_blank"><i class="fa fa-linkedin"></i></a></li>						<li class="print-page"><a href="javascript:window.print()" title="Print My Resume" class="print"><i class="fa fa-print"></i></a></li>						
+					</ul>				
+					
+				</div><!--end percent-one-third-->
+			</div><!--end centered-wrapper-->				
+		</div><!--end bottomfooter-->
+		
+		<a href="#" class="totop waves-effect waves-circle waves-light waves-float"><i class="fa fa-arrow-up"></i></a>
+
+	</footer><!--end footer-->	
+</div><!--end wrapper-->
+
+			<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+			function revslider_showDoubleJqueryError(sliderID) {
+				var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+				errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+				errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+				errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+				errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+					jQuery(sliderID).show().html(errorMessage);
+			}
+		</script>
+		<link rel='stylesheet' id='isotope-css-css'  href='https://kylegospodneti.ch/wp-content/plugins/js_composer/assets/css/lib/isotope.min.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css-css'  href='https://kylegospodneti.ch/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=5.7' type='text/css' media='all' />
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/gospo/assets/js/three.min.js?ver=5.8.8' id='three-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/gospo/assets/js/waves.min.js?ver=5.8.8' id='waves-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/gospo/assets/js/clipboard.min.js?ver=5.8.8' id='clipboardjs-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/gospo/assets/js/toastify.min.js?ver=5.8.8' id='toastify-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/gospo/assets/js/custom.js?ver=5.8.8' id='custom-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/hoverIntent.js?ver=r7' id='dt-hoverintent-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/scripts-bottom.js?ver=5.8.8' id='dt-scripts-bottom-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/jquery.isotope.min.js?ver=1.0' id='dt-isotope-js'></script>
+<script type='text/javascript' id='dt-custom-isotope-portfolio-js-extra'>
+/* <![CDATA[ */
+var vals = {"grid_manager":"0","grid_very_wide":"7","grid_wide":"5","grid_normal":"5","grid_small":"5","grid_tablet":"3","grid_phone":"2","grid_small_phone":"1","grid_gutter_width":"4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/custom/custom-isotope-portfolio.js?ver=1.0' id='dt-custom-isotope-portfolio-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/custom/custom-isotope-blog.js?ver=1.0' id='dt-custom-isotope-blog-js'></script>
+<script type='text/javascript' id='dt-custom-nav-js-extra'>
+/* <![CDATA[ */
+var dt_handler = {"curlink":"","scrolloffset":"0","hashtag":"","navspeed":"750"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/custom/custom-nav.js?ver=1.0' id='dt-custom-nav-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-includes/js/comment-reply.min.js?ver=5.8.8' id='comment-reply-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/custom/custom-social.js?ver=5.8.8' id='dt-social-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/themes/patti/js/custom/custom.js?ver=1.0' id='dt-custom-custom-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-includes/js/wp-embed.min.js?ver=5.8.8' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.7' id='wpb_composer_front_js-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/plugins/js_composer/assets/lib/bower/imagesloaded/imagesloaded.pkgd.min.js?ver=5.8.8' id='vc_grid-js-imagesloaded-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min.js?ver=5.7' id='isotope-js'></script>
+<script type='text/javascript' src='https://kylegospodneti.ch/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.7' id='waypoints-js'></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->	
+</body> 
+</html>

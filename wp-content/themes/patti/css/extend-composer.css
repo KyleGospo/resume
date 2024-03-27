@@ -1,0 +1,992 @@
+.wpb_row {
+	clear: both;
+}
+
+.vc_row .vc_row-o-full-height {
+  min-height: 100vh;
+}
+.vc_row .vc_row-o-content-middle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+html .wpb_revslider_element {
+	margin-bottom: 0 !important;
+}
+
+.wpb_alert p {
+	margin-bottom: 0 !important;
+}
+
+html .vc_pie_chart .vc_pie_chart_value {
+	font-size: 100%;
+	font-weight: bold;
+}
+
+html .wpb_row.no-margin {
+	margin-bottom: 0;
+}
+
+html .wpb_content_element .wpb_accordion_wrapper .wpb_accordion_content {
+	padding: 15px 0 !important;
+}
+
+html .wpb_call_to_action {
+	margin-bottom: 0px !important;
+}
+
+html .slides, html .wpb_thumbnails, html .wpb_tabs_nav {
+	margin:0 !important;
+}
+
+html .wpb_heading {
+	font-size: 13px;
+	line-height: 20px;
+	margin-bottom: 20px;
+	font-weight: 600;
+	text-transform:uppercase;
+}
+
+html .wpb_column .wpb_wrapper .wpb_content_element, ul.wpb_thumbnails-fluid > li, html .last_toggle_el_margin, .wpb_button {
+	margin-bottom:20px;
+}
+
+html .wpb_column .wpb_wrapper .wpb_content_element p {
+	margin-bottom:20px;
+}
+
+html .vc_wp_tagcloud .tagcloud br, html .vc_pie_chart .vc_pie_wrapper br{
+	display:none;
+}	
+
+html .wpb_gmaps_widget .wpb_map_wraper {
+	background-color: none;
+	padding: 0;
+}
+
+html .flickr_badge_image {
+	width: 56px;
+	height: 56px;
+}
+
+
+/* flexslider */
+html .flexslider .slides img {
+	height:auto;
+}
+
+html .flexslider {
+	margin:0 0 40px 0px;
+}
+
+html .flexslider {margin: 0 0 40px; background: #fff; border: none; position: relative; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; -o-box-shadow: none; zoom: 1;}
+
+html .wpb_gallery .wpb_flexslider .flex-control-nav {
+	bottom:0;
+}
+
+html .flex-direction-nav {*height: 0;}
+html .flex-direction-nav a {width: 27px; height: 43px; margin: -21px 0 0; display: block; background:#656565; }
+html .flex-direction-nav .flex-next {background-position: 0 0; right:0; background: #656565 url(/wp-content/themes/patti/images/blog-arrow-next.png) no-repeat 0 0; }
+html .flex-direction-nav .flex-prev {left: 0; background-position: 0 0; background: #656565 url(/wp-content/themes/patti/images/blog-arrow-prev.png) no-repeat 0 0;}
+html .flexslider:hover .flex-next {opacity: 1; right: 0px;}
+html .flexslider:hover .flex-prev {opacity: 1; left: 0px;}
+html .flex-direction-nav .flex-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+
+html .flex-control-nav {width: 100%; position: absolute; bottom: -40px; text-align: center;}
+html .flex-control-nav li {margin: 0 1px; display: inline-block; zoom: 1; *display: inline;}
+html .flex-control-paging li a {	display:inline-block; *display: inline; zoom: 1; width:40px; height:3px; overflow:hidden; background:#efefef; cursor:pointer; text-indent: -9999px; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; border-radius: 0; box-shadow: none;}
+html .flex-control-paging li a:hover { background: #efefef; background: #efefef; }
+
+
+/* nivo slider */ 
+html .nivoSlider img {
+	height:auto;
+}
+
+
+/* teaser posts */
+html .wpb_teaser_grid h2 {
+	font-size:16px;
+	text-transform:uppercase;
+}
+
+html .wpb_teaser_grid h2 a {
+	color:#444;
+}
+
+html .wpb_teaser_grid img {
+	width:100%;
+	height:auto;
+	display:block;
+	margin-bottom:15px;
+}
+html .wpb_teaser_grid p {
+	margin-bottom:10px;
+}
+
+
+/* tabs */
+
+html .wpb_content_element .wpb_tabs_nav li.ui-tabs-active, html .wpb_content_element .wpb_tabs_nav li:hover {
+	background: transparent;
+}
+
+html .wpb_content_element .wpb_tour_tabs_wrapper .wpb_tab, html .wpb_content_element .wpb_accordion_wrapper .wpb_accordion_content {
+	padding: 20px;
+}
+
+html .wpb_content_element .wpb_tabs_nav li.ui-tabs-active {
+	top:1px;
+	z-index: 1;
+	position:relative;
+}
+
+html .wpb_content_element .wpb_tabs_nav li.ui-tabs-active, html .wpb_content_element .wpb_tabs_nav li a:hover  { 
+    background: transparent;
+	color:#323232;
+}
+
+html .darker-overlay .wpb_content_element .wpb_tabs_nav li.ui-tabs-active, html .darker-overlay .wpb_content_element .wpb_tabs_nav li a:hover {
+	color: #fff;
+}
+
+html .wpb_tabs .wpb_tabs_nav li {
+	margin:0;
+}
+
+html .wpb_content_element .wpb_tabs_nav li {
+	background-color: transparent;
+	top:3px;
+	position: relative;
+}
+
+html .wpb_content_element .wpb_tabs_nav li.ui-tabs-active a {
+	background-color: transparent;
+	border-left: 1px solid #EFEFEF;	
+	border-right: 1px solid #EFEFEF;	
+	border-bottom: 1px solid #fff;	
+	color:#323232;	
+}
+
+html .darker-overlay .wpb_content_element .wpb_tabs_nav li.ui-tabs-active a {
+	color: #fff;
+}
+
+html .wpb_content_element .wpb_tour_tabs_wrapper .wpb_tabs_nav a {
+	text-decoration: none;
+	font-size: 14px;
+	display: block;
+	padding: 9px 25px;
+	outline: none;
+	border: 1px solid transparent;
+	color: #9a9a9a;
+	font-weight: 700;
+}
+
+html .wpb_content_element .wpb_tabs_nav li.ui-tabs-active {
+	position:relative;	
+}
+
+html .wpb_content_element .wpb_tabs_nav li a {
+	text-decoration:none; 
+	font-size:12px; 
+	display: block; 
+	padding: 0 25px; 
+	outline:none;
+	border: none;
+	color:#9a9a9a;
+	font-weight:600;
+	border-left: 1px solid #fff;	
+	border-right: 1px solid #fff;
+}
+
+html .wpb_content_element.wpb_tabs .wpb_tour_tabs_wrapper .wpb_tab {
+	background: transparent;
+	border:1px solid #efefef;
+}
+
+html .wpb_content_element .wpb_tabs .wpb_tour_tabs_wrapper .wpb_tabs_nav a {
+	padding:7px 12px;
+}
+
+
+/* tour */
+html .wpb_tour .wpb_tour_tabs_wrapper .wpb_tabs_nav li a {
+	border-left:1px solid #efefef;
+	border-bottom:1px solid #efefef;
+	border-right: none;
+}
+
+html .wpb_tour .wpb_tour_tabs_wrapper .wpb_tabs_nav li:first-child a {
+	border-top:1px solid #efefef;
+}
+
+html .wpb_tour .wpb_tour_tabs_wrapper .wpb_tab {
+	margin-left:0px;
+	padding:20px 25px;
+	border:1px solid #efefef;
+}
+
+html .wpb_tour  .wpb_tabs_nav li.ui-tabs-active a {
+	border-top:none !important;
+}
+
+html .wpb_tour  .wpb_tabs_nav li.ui-tabs-active:first-child a {
+	border-top:1px solid #efefef !important;
+}
+
+html .wpb_tour .wpb_tabs_nav li {
+	margin:0;
+}
+
+html .wpb_tour .wpb_tour_tabs_wrapper .wpb_tabs_nav li {
+	top:0px;
+}
+
+
+/* accordion */
+html .wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header {
+	background: transparent;
+	border:none;	
+}
+
+html .wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header:focus {
+	outline: none;
+}
+
+html .wpb_accordion .wpb_accordion_wrapper .wpb_accordion_header a {
+	margin: 0;
+	font-size: 14px;
+	cursor: pointer;
+	padding: 12px 40px 12px 0;
+	color: #444;
+	font-weight: 700;
+}
+
+html .wpb_accordion_section {
+	border-bottom:1px solid #efefef;
+}
+
+html .wpb_accordion .wpb_accordion_wrapper .ui-state-default .ui-icon, html .wpb_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon {
+	width: 28px;
+	height: 28px;
+	font-family: fontawesome;
+	color: #323232;
+	cursor: pointer;
+	text-align: right;
+	background-image: none;
+	position: absolute;
+	right: 0;
+	top: 9px;
+	font-size: 14px;	
+	background: none !important;
+}
+
+html .wpb_accordion .wpb_accordion_wrapper .ui-state-default .ui-icon:before {
+	content: "\f0dd";
+}
+
+html .wpb_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon:before {
+	content: "\f0de";
+}
+
+html .wpb_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon {
+	top: 14px !important;
+}
+
+
+/* toggles */
+html .wpb_toggle,
+#content h4.wpb_toggle {
+	margin: 0;
+	font-size: 14px;
+	cursor: pointer;
+	padding: 12px 40px 12px 0;
+	color: #444;
+	font-weight: 700;
+	background: none;
+	position:relative;
+}
+
+html h4.wpb_toggle:after {
+	content: "\f0dd";
+	width: 28px;
+	height: 28px;
+	font-family: fontawesome;
+	color: #323232;
+	cursor: pointer;
+	text-align: right;
+	background-image: none;
+	position: absolute;
+	right: 0;
+	top: 9px;
+	font-size: 14px;		
+}
+
+html .wpb_toggle_title_active,
+#content h4.wpb_toggle_title_active {
+  background: none;
+}
+
+h4.wpb_toggle.wpb_toggle_title_active:after {
+	content: "\f0de";
+	width: 28px;
+	height: 28px;
+	font-family: fontawesome;
+	color: #323232;
+	cursor: pointer;
+	text-align: right;
+	background-image: none;
+	position: absolute;
+	right: 0;
+	top: 14px;
+	font-size: 14px;	
+}
+
+html .wpb_toggle_content {
+	padding: 0 0 10px;	
+	margin: 0;
+}
+
+
+/* infoboxes */
+html .wpb_alert {
+	padding: 12px 20px;
+	margin-bottom:10px;
+	background-color: #fdf4bd;
+	border: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	color: #706836;
+	clear: both;
+}
+
+html .wpb_alert strong {
+	color: inherit;
+}
+
+html .wpb_alert-success {
+	background-color: #e5eec0;
+	border-color: none;
+	color: #264509;
+}
+
+html .wpb_alert-danger,
+html .wpb_alert-error {
+	background-color: #fce2e3;
+	border-color: none;
+	color: #e54034;
+}
+
+html .wpb_alert-info {
+	background-color: #d4ebf6;
+	border-color: none;
+	color: #20568f;
+}
+
+html .wpb_alert .messagebox_text {
+	padding:0;
+	background: none;
+	float:left;
+}
+
+.wpb_alert:before {
+	content: "\f06a" !important;
+	font-family: fontawesome;
+	font-size: 14px;
+	float: left;
+	margin-right: 15px;
+}
+
+.wpb_alert.wpb_alert-info:before {
+	content: "\f05a" !important;
+}
+
+.wpb_alert.wpb_alert-error:before {
+	content: "\f056" !important;
+}
+
+.wpb_alert.wpb_alert-success:before {
+	content: "\f024" !important;
+}
+
+html .wpb_alert {
+	overflow:hidden;
+}
+
+html .wpb_alert i {
+	float:left;
+	font-size: 14px;
+	margin-right: 15px;	
+	top: 3px;
+	position: relative;	
+}
+
+html .wpb_alert-info .messagebox_text {
+	padding:0;
+	background: none;
+}
+
+html .wpb_alert-success .messagebox_text {
+	padding:0;
+	background: none;
+}
+
+html .wpb_alert-error .messagebox_text {
+	padding:0;
+	background: none;
+}
+
+
+/* Buttons
+---------------------------------------------------------- */
+html .wpb_button {
+	font-family:inherit;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 16px;
+	margin: 0 10px 20px 0;
+	padding: 9px 14px;
+	display: inline-block;
+	*display: inline;
+	/* IE7 inline-block hack */
+
+  *zoom: 1;
+  *line-height: 20px;
+    background-color:#eaeaea;
+    color: #686868;
+  text-align: center;
+  text-shadow: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 0;
+  *border: 0;
+  border-bottom-color: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  *margin-left: .3em;
+
+  -webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  -ms-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;  
+}
+
+html .wpb_button:hover,
+html .wpb_button:active,
+html .wpb_button.active,
+html .wpb_button.disabled,
+html .wpb_button[disabled] {
+    color: #686868;
+	background-color:#d2d2d2;
+}
+
+html .wpb_button:active,
+html .wpb_button.active {
+  background-color: #d2d2d2 \9;
+}
+
+html .wpb_button:first-child {
+  *margin-left: 0;
+}
+
+html .wpb_button:hover {
+  color: #444;
+  text-decoration: none;
+  background-color: #d2d2d2;
+  *background-color: #d2d2d2;
+  /* Buttons in IE7 don't get borders, so darken on hover */
+}
+
+html .wpb_button:focus {
+  outline: 0;
+  outline: 0;
+  outline-offset: 0;
+}
+
+html .wpb_button.active,
+html .wpb_button:active {
+  background-color: #d2d2d2;
+  background-color: #d2d2d2 \9;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  box-shadow: 0;
+}
+
+html button.wpb_btn-large,
+html span.wpb_btn-large {
+  padding: 14px 20px;
+  font-size: 14px;
+  line-height: normal;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+html button.wpb_btn-large [class^="icon-"],
+html span.wpb_btn-large [class^="icon-"] {
+  margin-top: 1px;
+}
+
+html button.wpb_btn-small,
+html span.wpb_btn-small {
+  padding: 7px 11px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+html button.wpb_btn-small [class^="icon-"],
+html span.wpb_btn-small [class^="icon-"] {
+  margin-top: -1px;
+}
+
+html button.wpb_btn-mini,
+html span.wpb_btn-mini {
+  padding: 5px 9px;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+html .wpb_btn-primary,
+html .wpb_btn-primary:hover,
+html .wpb_btn-warning,
+html .wpb_btn-warning:hover,
+html .wpb_btn-danger,
+html .wpb_btn-danger:hover,
+html .wpb_btn-success,
+html .wpb_btn-success:hover,
+html .wpb_btn-info,
+html .wpb_btn-info:hover,
+html .wpb_btn-inverse,
+html .wpb_btn-inverse:hover {
+  color: #ffffff;
+  text-shadow: none;
+}
+
+html .wpb_btn-primary.active,
+html .wpb_btn-warning.active,
+html .wpb_btn-danger.active,
+html .wpb_btn-success.active,
+html .wpb_btn-info.active,
+html .wpb_btn-inverse.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+html .wpb_button {
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+}
+
+html .wpb_btn-primary {
+  background-color: #30b4c5;
+}
+
+html .wpb_btn-primary:hover,
+html .wpb_btn-primary:active,
+html .wpb_btn-primary.active,
+html .wpb_btn-primary.disabled,
+html .wpb_btn-primary[disabled] {
+  background-color: #2b9fae;
+}
+
+html .wpb_btn-primary:active,
+html .wpb_btn-primary.active {
+  background-color: #005580 \9;
+}
+
+html .wpb_btn-warning {
+  background-color: #fe7e17;
+}
+
+html .wpb_btn-warning:hover,
+html .wpb_btn-warning:active,
+html .wpb_btn-warning.active,
+html .wpb_btn-warning.disabled,
+html .wpb_btn-warning[disabled] {
+  background-color: #f77309;
+}
+
+html .wpb_btn-warning:active,
+html .wpb_btn-warning.active {
+  background-color: #b36b00 \9;
+}
+
+html .wpb_btn-danger {
+  background-color: #e1472f;
+}
+
+html .wpb_btn-danger:hover,
+html .wpb_btn-danger:active,
+html .wpb_btn-danger.active,
+html .wpb_btn-danger.disabled,
+html .wpb_btn-danger[disabled] {
+  background-color: #d44029;
+}
+
+html .wpb_btn-danger:active,
+html .wpb_btn-danger.active {
+  background-color: #ff200f \9;
+}
+
+html .wpb_btn-success {
+  background-color: #9dd30b;
+}
+
+html .wpb_btn-success:hover,
+html .wpb_btn-success:active,
+html .wpb_btn-success.active,
+html .wpb_btn-success.disabled,
+html .wpb_btn-success[disabled] {
+  background-color: #8dbd0a;
+}
+
+html .wpb_btn-success:active,
+html .wpb_btn-success.active {
+  background-color: #488644 \9;
+}
+
+html .wpb_btn-info {
+  background-color: #ffb141;
+}
+
+html .wpb_btn-info:hover,
+html .wpb_btn-info:active,
+html .wpb_btn-info.active,
+html .wpb_btn-info.disabled,
+html .wpb_btn-info[disabled] {
+  background-color: #fd9602;
+}
+
+html .wpb_btn-info:active,
+html .wpb_btn-info.active {
+  background-color: #2a97bc \9;
+}
+
+html .wpb_btn-inverse {
+  background-color: #555555;
+}
+
+html .wpb_btn-inverse:hover,
+html .wpb_btn-inverse:active,
+html .wpb_btn-inverse.active,
+html .wpb_btn-inverse.disabled,
+html .wpb_btn-inverse[disabled] {
+  background-color: #484848;
+}
+
+html .wpb_btn-inverse:active,
+html .wpb_btn-inverse.active {
+  background-color: #2f2f2f \9;
+}
+
+html button.wpb_button,
+html input[type="submit"].wpb_button {
+  *padding-top: 2px;
+  *padding-bottom: 2px;
+}
+
+html button.wpb_button::-moz-focus-inner,
+html input[type="submit"].wpb_button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+html button.wpb_button.wpb_btn-large,
+html input[type="submit"].wpb_button.wpb_btn-large {
+  *padding-top: 7px;
+  *padding-bottom: 7px;
+}
+
+html button.wpb_button.wpb_btn-small,
+html input[type="submit"].wpb_button.wpb_btn-small {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+
+html button.wpb_button.wpb_btn-mini,
+html input[type="submit"].wpb_button.wpb_btn-mini {
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+
+/* Call to Action
+---------------------------------------------------------- */
+
+html .wpb_call_text {
+	font-weight:300;
+	line-height:42px;
+}
+
+html .wpb_call_to_action br {
+	display:none;
+}
+
+
+/* Button
+---------------------------------------------------------- */
+html a.wpb_button_a {
+  text-decoration: none;
+  border: none;
+}
+
+html a.wpb_button_a:hover {
+  text-decoration: none;
+}
+
+html .wpb_button:hover {
+  background-image: none;
+}
+
+html i.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  vertical-align: text-top;
+  margin-left: 5px;
+}
+
+html .wpb_btn-large i.icon {
+  height: 19px;
+  margin-left: 9px;
+}
+
+html .wpb_btn-small i.icon {
+  height: 15px;
+}
+
+html .wpb_btn-mini i.icon {
+  display: none;
+}
+
+html .wpb_address_book i.icon,
+html option.wpb_address_book {
+  background: url(/wp-content/themes/patti/images/icons/address-book.png) no-repeat right center;
+}
+
+html .wpb_alarm_clock i.icon,
+html option.wpb_alarm_clock {
+  background: url(/wp-content/themes/patti/images/icons/alarm-clock.png) no-repeat right center;
+}
+
+html .wpb_anchor i.icon,
+html option.wpb_anchor {
+  background: url(/wp-content/themes/patti/images/icons/anchor.png) no-repeat right center;
+}
+
+html .wpb_application_image i.icon,
+html option.wpb_application_image {
+  background: url(/wp-content/themes/patti/images/icons/application-image.png) no-repeat right center;
+}
+
+html .wpb_arrow i.icon,
+html option.wpb_arrow {
+  background: url(/wp-content/themes/patti/images/icons/arrow.png) no-repeat right center;
+}
+
+html .wpb_asterisk i.icon,
+html option.wpb_asterisk {
+  background: url(/wp-content/themes/patti/images/icons/asterisk.png) no-repeat right center;
+}
+
+html .wpb_hammer i.icon,
+html option.wpb_hammer {
+  background: url(/wp-content/themes/patti/images/icons/auction-hammer.png) no-repeat right center;
+}
+
+html .wpb_balloon i.icon,
+html option.wpb_balloon {
+  background: url(/wp-content/themes/patti/images/icons/balloon.png) no-repeat right center;
+}
+
+html .wpb_balloon_buzz i.icon,
+html option.wpb_balloon_buzz {
+  background: url(/wp-content/themes/patti/images/icons/balloon-buzz.png) no-repeat right center;
+}
+
+html .wpb_balloon_facebook i.icon,
+html option.wpb_balloon_facebook {
+  background: url(/wp-content/themes/patti/images/icons/balloon-facebook.png) no-repeat right center;
+}
+
+html .wpb_balloon_twitter i.icon,
+html option.wpb_balloon_twitter {
+  background: url(/wp-content/themes/patti/images/icons/balloon-twitter.png) no-repeat right center;
+}
+
+html .wpb_battery i.icon,
+html option.wpb_battery {
+  background: url(/wp-content/themes/patti/images/icons/battery-full.png) no-repeat right center;
+}
+html .wpb_binocular i.icon,
+html option.wpb_binocular {
+  background: url(/wp-content/themes/patti/images/icons/binocular.png) no-repeat right center;
+}
+
+html .wpb_document_excel i.icon,
+html option.wpb_document_excel {
+  background: url(/wp-content/themes/patti/images/icons/blue-document-excel.png) no-repeat right center;
+}
+
+html .wpb_document_image i.icon,
+html option.wpb_document_image {
+  background: url(/wp-content/themes/patti/images/icons/blue-document-image.png) no-repeat right center;
+}
+
+html .wpb_document_music i.icon,
+html option.wpb_document_music {
+  background: url(/wp-content/themes/patti/images/icons/blue-document-music.png) no-repeat right center;
+}
+
+html .wpb_document_office i.icon,
+html option.wpb_document_office {
+  background: url(/wp-content/themes/patti/images/icons/blue-document-office.png) no-repeat right center;
+}
+
+html .wpb_document_pdf i.icon,
+html option.wpb_document_pdf {
+  background: url(/wp-content/themes/patti/images/icons/blue-document-pdf.png) no-repeat right center;
+}
+
+html .wpb_document_powerpoint i.icon,
+html option.wpb_document_powerpoint {
+  background: url(/wp-content/themes/patti/images/icons/blue-document-powerpoint.png) no-repeat right center;
+}
+
+html .wpb_document_word i.icon,
+html option.wpb_document_word {
+  background: url(/wp-content/themes/patti/images/icons/blue-document-word.png) no-repeat right center;
+}
+
+html .wpb_bookmark i.icon,
+html option.wpb_bookmark {
+  background: url(/wp-content/themes/patti/images/icons/bookmark.png) no-repeat right center;
+}
+
+html .wpb_camcorder i.icon,
+html option.wpb_camcorder {
+  background: url(/wp-content/themes/patti/images/icons/camcorder.png) no-repeat right center;
+}
+
+html .wpb_camera i.icon,
+html option.wpb_camera {
+  background: url(/wp-content/themes/patti/images/icons/camera.png) no-repeat right center;
+}
+
+html .wpb_chart i.icon,
+html option.wpb_chart {
+  background: url(/wp-content/themes/patti/images/icons/chart.png) no-repeat right center;
+}
+
+html .wpb_chart_pie i.icon,
+html option.wpb_chart_pie {
+  background: url(/wp-content/themes/patti/images/icons/chart-pie.png) no-repeat right center;
+}
+
+html .wpb_clock i.icon,
+html option.wpb_clock {
+  background: url(/wp-content/themes/patti/images/icons/clock.png) no-repeat right center;
+}
+
+html .wpb_play i.icon,
+html option.wpb_play {
+  background: url(/wp-content/themes/patti/images/icons/control.png) no-repeat right center;
+}
+
+html .wpb_fire i.icon,
+html option.wpb_fire {
+  background: url(/wp-content/themes/patti/images/icons/fire.png) no-repeat right center;
+}
+
+html .wpb_heart i.icon,
+html option.wpb_heart {
+  background: url(/wp-content/themes/patti/images/icons/heart.png) no-repeat right center;
+}
+
+html .wpb_mail i.icon,
+html option.wpb_mail {
+  background: url(/wp-content/themes/patti/images/icons/mail.png) no-repeat right center;
+}
+
+html .wpb_shield i.icon,
+html option.wpb_shield {
+  background: url(/wp-content/themes/patti/images/icons/plus-shield.png) no-repeat right center;
+}
+
+html .wpb_video i.icon,
+html option.wpb_video {
+  background: url(/wp-content/themes/patti/images/icons/video.png) no-repeat right center;
+}
+
+html .wpb_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon, html .wpb_accordion .wpb_accordion_wrapper .ui-state-default .ui-icon {
+    background: none !important;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (-o-min-device-pixel-ratio: 3/2),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5) {	
+		html .wpb_accordion .wpb_accordion_wrapper .ui-state-default .ui-icon, html .wpb_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon {
+			background:#7b7b7b url(/wp-content/themes/patti/images/plus@2x.png) no-repeat scroll 0 0;
+			-moz-background-size:21px 21px;
+			-ie-background-size:21px 21px;
+			-o-background-size:21px 21px;
+			-webkit-background-size:21px 21px;
+			background-size:21px 21px;			
+		}	
+		
+		html .wpb_toggle,
+		#content h4.wpb_toggle {
+			background: url(/wp-content/themes/patti/images/toggle_plus@2x.png) no-repeat left center;
+			-moz-background-size:21px 21px;
+			-ie-background-size:21px 21px;
+			-o-background-size:21px 21px;
+			-webkit-background-size:21px 21px;
+			background-size:21px 21px;				
+		}	
+		html .wpb_toggle_title_active,
+		#content h4.wpb_toggle_title_active {
+		  background: url(/wp-content/themes/patti/images/toggle_minus@2x.png) no-repeat left center;
+			-moz-background-size:21px 21px;
+			-ie-background-size:21px 21px;
+			-o-background-size:21px 21px;
+			-webkit-background-size:21px 21px;
+			background-size:21px 21px;			  
+		}		
+}
+
+@media only screen and (max-width: 767px) {
+	html .wpb_content_element .wpb_tabs_nav li	{
+		width: 100%;
+		border-bottom: 1px solid #efefef;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	html .wpb_animate_when_almost_visible	{
+		opacity: 1;
+	}
+
+	html .wpb_start_animation {
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;		
+	}
+}
+

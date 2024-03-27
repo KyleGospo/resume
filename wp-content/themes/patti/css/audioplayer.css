@@ -1,0 +1,480 @@
+/*
+ * http://www.jplayer.org
+ * Copyright (c) 2010-2012 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Silvia Benvenuti
+ * Skin Version: 4.2 (jPlayer 2.2.0)
+ * Date: 22nd October 2012
+ */
+
+.jp-audio,
+.jp-audio-stream,
+.jp-video {
+	font-size:1.25em; /* 1.25em for testing in site pages */ /* No parent CSS that can effect the size in the demos ZIP */
+	line-height:1.6;
+	color: #686868;
+	background-color:#323232;
+	clear:both;
+	height:34px;
+}
+.jp-audio, .jp-video  {
+	width:100%;
+}
+.jp-audio-stream, .jp-video-stream {
+	width:182px;
+}
+
+/* The z-index rule is defined in this manner to enable Popcorn plugins that add overlays to video area. EG. Subtitles. */
+.jp-video-full   {
+	z-index:1000;
+}
+
+.jp-video-full .jp-jplayer {
+	top: 0;
+	left: 0;
+	position: fixed !important; position: relative; /* Rules for IE6 (full-screen) */
+	overflow: hidden;
+}
+
+.jp-video-full .jp-gui {
+	position: fixed !important; position: static; /* Rules for IE6 (full-screen) */
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	z-index:1001; /* 1 layer above the others. */
+}
+
+.jp-video-full .jp-interface {
+	position: absolute !important; position: relative; /* Rules for IE6 (full-screen) */
+	bottom: 0;
+	left: 0;
+}
+
+.jp-interface {
+	position: relative;
+	background-color:#323232;
+	width:100%;
+}
+
+.jp-audio .jp-type-single .jp-interface, .jp-video .jp-type-single .jp-interface {
+	height:34px;
+}
+.jp-audio .jp-type-playlist .jp-interface, .jp-video .jp-type-playlist .jp-interface {
+	height:34px;
+}
+
+.jp-audio-stream .jp-type-single .jp-interface, .jp-video-stream .jp-type-single .jp-interface {
+	height:34px;
+}
+
+.jp-video .jp-interface {
+	border-top:1px solid #009be3;
+}
+
+/* @group CONTROLS */
+
+.jp-controls-holder {
+	clear: both;
+	margin:0 auto;
+	position: relative;
+	overflow:hidden;
+	top:-8px; /* This negative value depends on the size of the text in jp-currentTime and jp-duration */
+}
+
+.jp-interface .jp-controls {
+	list-style-type:none;
+	margin:0;
+	padding: 0;
+	overflow:hidden;
+}
+
+.jp-audio .jp-controls, .jp-video .jp-controls {
+	width: 100%;
+}
+
+
+.jp-video .jp-controls,
+.jp-interface .jp-controls li {
+	display:inline;
+}
+
+.jp-interface .jp-controls a {
+	display:block;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+a.jp-play,
+a.jp-pause {
+	width:34px;
+	height:34px;
+	float:left;
+	border-right: 1px solid #1a1a1a;		
+}
+
+a.jp-play {
+	background: url("/wp-content/themes/patti/images/audio-controls.png") 0 0 no-repeat;
+}
+a.jp-play:hover {
+	background: url("/wp-content/themes/patti/images/audio-controls.png") 0 -34px no-repeat;
+}
+a.jp-pause {
+	background: url("/wp-content/themes/patti/images/audio-controls.png") -34px 0 no-repeat;
+	display: none;
+}
+a.jp-pause:hover {
+	background: url("/wp-content/themes/patti/images/audio-controls.png") -34px -34px no-repeat;
+}
+
+a.jp-stop, a.jp-previous, a.jp-next {
+	width:28px;
+	height:28px;
+	margin-top:6px;
+}
+
+
+/* @end */
+
+/* @group progress bar */
+
+.jp-progress {
+	overflow:hidden;
+	background-color: #ddd;
+}
+.jp-audio .jp-progress, .jp-video .jp-progress {
+	position: absolute;
+	top: 14px;
+	height: 6px;
+}
+.jp-audio .jp-type-single .jp-progress, .jp-video .jp-type-single .jp-progress {
+	left: 95px;
+}
+.jp-audio .jp-type-playlist .jp-progress, .jp-video .jp-type-playlist .jp-progress {
+	left:166px;
+	width:130px;
+}
+
+.jp-seek-bar {
+	background: #bebebe;
+	width:0px;
+	height:100%;
+	cursor: pointer;
+}
+.jp-play-bar {
+	width:0px;
+	height:100%;
+}
+
+/* @end */
+
+/* @group volume controls */
+
+
+a.jp-mute,
+a.jp-unmute,
+a.jp-volume-max {
+	width:34px;
+	height:34px;
+	float:right;
+	border-left: 1px solid #545454;	
+}
+
+.jp-video a.jp-mute,
+.jp-video a.jp-unmute,
+.jp-video a.jp-volume-max {
+	top:12px;
+	margin-top:0;
+}
+
+.jp-full-screen {
+	display: none !important;
+}
+
+.jp-jplayer {
+	
+}
+
+a.jp-mute {
+	background: url("/wp-content/themes/patti/images/audio-controls.png") -68px 0 no-repeat;
+}
+a.jp-mute:hover {
+	background: url("/wp-content/themes/patti/images/audio-controls.png") -68px -34px no-repeat;
+}
+a.jp-unmute {
+	background: url("/wp-content/themes/patti/images/audio-controls.png") -102px 0 no-repeat;
+	display: none;
+}
+
+
+.jp-volume-bar {
+	position: relative;
+	overflow:hidden;
+	background:#bebebe;
+	width:46px;
+	height:6px;
+	margin-top:14px;
+	margin-right:15px;
+	cursor: pointer;
+}
+.jp-audio .jp-volume-bar, .jp-video .jp-volume-bar {
+	float:right;
+}
+
+.jp-volume-bar-value {
+	width:0px;
+	height:6px;
+}
+
+/* @end */
+
+/* @group current time and duration */
+
+.jp-audio .jp-time-holder, .jp-video .jp-time-holder {
+	position:absolute;
+	top:50px;
+}
+.jp-audio .jp-type-single .jp-time-holder, .jp-video .jp-type-single .jp-time-holder {
+	left:110px;
+	width:186px;
+}
+.jp-audio .jp-type-playlist .jp-time-holder, .jp-video .jp-type-playlist .jp-time-holder {
+	left:166px;
+	width:130px;
+}
+
+.jp-current-time,
+.jp-duration {
+	width:60px;
+	font-size: 11px;
+	color: #EFEFEF;
+	text-align: center;
+	height: 34px;
+	line-height: 34px;	
+}
+.jp-current-time {
+	float: left;
+	display:inline;
+	border-left: 1px solid #545454;
+}
+.jp-duration {
+	float: right;
+	display:inline;
+	text-align: center;
+	border-right: 1px solid #1a1a1a;
+}
+
+/* @end */
+
+/* @group playlist */
+
+.jp-title {
+	font-weight:bold;
+	text-align:center;
+}
+
+.jp-title,
+.jp-playlist {
+	width:100%;
+	background-color:#ccc;
+	border-top:1px solid #009be3;
+}
+.jp-type-single .jp-title,
+.jp-type-playlist .jp-title,
+.jp-type-single .jp-playlist {
+	border-top:none;
+}
+.jp-title ul,
+.jp-playlist ul {
+	list-style-type:none;
+	margin:0;
+	padding:0 20px;
+	font-size:.72em;
+}
+
+.jp-title li {
+	padding:5px 0;
+	font-weight:bold;
+}
+.jp-playlist li {
+	padding:5px 0 4px 20px;
+	border-bottom:1px solid #eee;
+}
+
+.jp-playlist li  {
+	display:inline;
+}
+
+/* Note that the first-child (IE6) and last-child (IE6/7/8) selectors do not work on IE */
+
+.jp-type-playlist .jp-playlist li:last-child {
+	padding:5px 0 5px 20px;
+	border-bottom:none;
+}
+.jp-type-playlist .jp-playlist li.jp-playlist-current {
+	list-style-type:square;
+	list-style-position:inside;
+	padding-left:7px;
+}
+.jp-type-playlist .jp-playlist a {
+	color: #333;
+	text-decoration: none;
+}
+.jp-type-playlist .jp-playlist a:hover {
+	color:#0d88c1;
+}
+.jp-type-playlist .jp-playlist a.jp-playlist-current {
+	color:#0d88c1;
+}
+
+.jp-type-playlist .jp-playlist a.jp-playlist-item-remove {
+	float:right;
+	display:inline;
+	text-align:right;
+	margin-right:10px;
+	font-weight:bold;
+	color:#666;
+}
+.jp-type-playlist .jp-playlist a.jp-playlist-item-remove:hover {
+	color:#0d88c1;
+}
+.jp-type-playlist .jp-playlist span.jp-free-media {
+	float:right;
+	display:inline;
+	text-align:right;
+	margin-right:10px;
+}
+.jp-type-playlist .jp-playlist span.jp-free-media a{
+	color:#666;
+}
+.jp-type-playlist .jp-playlist span.jp-free-media a:hover{
+	color:#0d88c1;
+}
+span.jp-artist {
+	font-size:.8em;
+	color:#666;
+}
+
+/* @end */
+
+.jp-video-play {
+	width:100%;
+	overflow:hidden; /* Important for nested negative margins to work in modern browsers */
+	cursor:pointer;
+	background-color:rgba(0,0,0,0); /* Makes IE9 work with the active area over the whole video area. IE6/7/8 only have the button as active area. */
+}
+.jp-video-270p .jp-video-play {
+	margin-top:-270px;
+	height:270px;
+}
+.jp-video-360p .jp-video-play {
+	margin-top:-360px;
+	height:360px;
+}
+.jp-video-full .jp-video-play {
+	height:100%;
+}
+a.jp-video-play-icon {
+	position:relative;
+	display:block;
+	width: 112px;
+	height: 100px;
+
+	margin-left:-56px;
+	margin-top:-50px;
+	left:50%;
+	top:50%;
+
+	
+	text-indent:-9999px;
+}
+.jp-video-play:hover a.jp-video-play-icon {
+	
+}
+
+
+
+
+
+.jp-jplayer audio,
+.jp-jplayer {
+	width:0px;
+	height:0px;
+}
+
+.jp-jplayer {
+	background-color: #000000;
+}
+
+
+
+
+
+/* @group TOGGLES */
+
+/* The audio toggles are nested inside jp-time-holder */
+
+ul.jp-toggles {
+	list-style-type:none;
+	padding:0;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+.jp-audio .jp-type-single ul.jp-toggles {
+	width:25px;
+}
+.jp-audio .jp-type-playlist ul.jp-toggles {
+	width:55px;
+	margin: 0;
+	position: absolute;
+	left: 325px;
+	top: 50px;
+}
+
+.jp-video ul.jp-toggles {
+	margin-top:10px;
+	width:100px;
+}
+
+ul.jp-toggles li {
+	display:block;
+	float:right;
+}
+
+ul.jp-toggles li a {
+	display:block;
+	width:25px;
+	height:18px;
+	text-indent:-9999px;
+	line-height:100%; /* need this for IE6 */
+}
+
+
+/* @end */
+
+/* @group NO SOLUTION error feedback */
+
+.jp-no-solution {
+	padding:5px;
+	font-size:.8em;
+	background-color:#eee;
+	border:2px solid #009be3;
+	color:#000;
+	display:none;
+}
+
+.jp-no-solution a {
+	color:#000;
+}
+
+.jp-no-solution span {
+	font-size:1em;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+}
+
+/* @end */

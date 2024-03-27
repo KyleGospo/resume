@@ -1,0 +1,265 @@
+/* Print CSS */
+
+@page {
+    size: 14in 18in;
+}
+
+/*Layout correction*/
+#skills .vc_col-sm-6 {
+    width: 50%!important;
+    float: left;
+}
+
+.vc_separator,
+.vc_empty_space,
+.bottom-link-container,
+.timeline-start {
+    display: none!important;
+    visibility: hidden;
+}
+
+#timeline article {
+    float: left;
+}
+
+article.ublue,
+article.geardev {
+    page-break-after:always;
+}
+
+#education {
+	margin-top:80px;
+}
+
+#referenced-urls {
+    page-break-before:always;
+}
+
+#about .wp_content_element {
+    margin-bottom: 0px!important;
+}
+
+/*Font size changes*/
+.large-text {
+    font-size:20px!important;
+    line-height:25px!important;
+}
+
+h1.name {
+    font-size: 43px;
+    line-height: 43px;
+}
+
+ul, li, section#timeline article div.inner .content, .mini-timeline, .mini-timeline-start {
+    font-size:17px!important;
+    line-height:27px!important;
+}
+
+span.date, .mini-date {
+	font-size:15px!important;
+	line-height:25px!important;
+}
+
+.waves-button, .waves-button:hover, .waves-button:visited, .waves-button-input {
+	font-size:17px!important;
+	line-height: 20px!important;
+}
+
+h2 {
+	font-size:25px!important;
+	line-height:28px!important;
+}
+
+h3 {
+	font-size:22px!important;
+	line-height:25px!important;
+}
+
+/*Misc changes */
+.vc_row-o-content-middle {
+	padding-top:20px!important;
+	padding-bottom:20px!important;
+}
+
+header {
+    display:none;
+    visibility:hidden;
+}
+
+footer {
+    display: none!important;
+    visibility:hidden;
+}
+
+.empty-space-top {
+	height:50px!important;
+}
+
+section#timeline article div.inner {
+    box-shadow: none;
+    border-bottom:1px solid #DDD;
+    border-radius:0px;
+}
+
+section#timeline article div.inner .content .bottom-link-container {
+    border:none;
+}
+
+#experience article:not(.geardev):not(.ublue) a:not(.prettyphoto):after, 
+#education a:not(.prettyphoto):after {
+    display:inline-block;
+    visibility:visible;
+    content:"- " attr(href);
+}
+
+#experience > div,
+#education > div,
+section#timeline {
+    padding-top:10px!important;
+    padding-bottom: 10px!important;
+}
+
+section#timeline article.geardev div.inner .content .bottom-link-container,
+section#timeline article div.inner .content .bottom-link-container .fa {
+    display: none;
+    visibility:hidden;
+}
+
+section#timeline article div.inner {
+    width: 96%;
+    float: right;
+}
+
+section#timeline:before, section#timeline-mini:before {
+    display:none;
+}
+
+section#timeline article div.inner span.date {
+    left: 0!important;
+    background-color: #FFF;
+    top: 0px;
+    color: #000;
+}
+
+.education section#timeline article div.inner span.date {
+    background:#FFF;
+    color:#000;
+    left:10px!important;
+}
+
+section#timeline article div.inner span.date span {
+    font-weight: 400!important;
+}
+
+.uvc-heading {
+    text-align: left!important;
+    width:100%!important;
+}
+
+section#timeline-mini.move-up {
+    margin-top:0!important;
+    overflow:visible;
+    padding-bottom: 10px;
+}
+
+section#timeline-mini .mini-timeline {
+    width:96%;
+    box-shadow:none;
+    border-radius:0;
+    border-bottom:1px solid #DDD;
+    float:right;
+}
+
+.mini-timeline-start {
+    width:100%;
+    border-radius:0;
+    box-shadow:none;
+    padding-top:50px
+}
+
+.mini-timeline .mini-date, .mini-timeline-start .mini-date {
+    position:absolute;
+    left: -15px;
+    z-index:100;
+}
+
+.mini-timeline-start .mini-date {
+    left:-5px;
+}
+
+#education .date-small {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*Disable animations*/
+
+.hidden-scrolled.scrolled-move-up {
+    transform: none;
+}
+
+.hidden-scrolled {
+    opacity: 1;
+}
+
+.waves-float {
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Color changes/removals */
+
+.totop {
+	display:none;
+	visibility:hidden;
+}
+
+h2 {
+    color: #000!important;
+}
+
+a {
+    color: inherit!important;
+}
+
+.customlist li i {
+    color: inherit!important;
+}
+
+.skill-list li {
+    background-color: #f9f9f9;
+	-webkit-print-color-adjust: exact
+}
+
+div.experience,
+div.education {
+    background-color:#FFF;
+}
+
+.pgp-btn {
+    display: none;
+    visibility: hidden;
+}
+
+.github-calendar-art {
+    display: none;
+    visibility: hidden;
+}
+
+.fa-circle-o::before {
+    content: "\f111" !important;
+    font-size: 8px;
+    line-height: 8px;
+    top: -3px;
+    position: relative;
+}
+
+#referenced-urls {
+    display: block;
+    visibility: visible;
+}
+
+.index-marker {
+    display: inline;
+    visibility: visible;
+}

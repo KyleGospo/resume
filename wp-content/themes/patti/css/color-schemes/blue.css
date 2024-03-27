@@ -1,0 +1,268 @@
+a {
+	color: #21748C;
+}
+
+#spinner:before {
+	border-top-color: #21748C;
+	border-left-color: #21748C;
+	border-right-color: #21748C;
+}
+
+#qLbar {
+	background: #21748C;
+	color: #21748C;
+}
+
+.bold-fill .dt-service-icon i {
+	background: #21748C;
+}
+
+.thin-fill .dt-service-icon i {
+	border: 1px solid #21748C;
+	color: #21748C;
+}
+
+.no-fill .dt-service-icon i {
+	color: #21748C;	
+}
+
+.widget .tagcloud a:hover {
+	background: #21748C;
+	color: #fff;
+}
+
+.widget-tweet-text a {
+	color: #21748C;
+}
+
+#header-social a:hover {
+	color: #21748C;
+}
+
+.next-prev-posts a:hover {
+	color:#21748C;
+}
+
+.nav-btn:hover {
+	color: #21748C;
+}
+
+.share-options a:hover {
+	color: #21748C;
+}
+
+ul#mainnav > li.highlighted-state > a span, ul#mainnav > li.current > a span/*,
+ul#mainnav > li.current-menu-item > a span, .dark-header ul#mainnav > li.current-menu-item > a span*/  {
+	color: #21748C;
+	border-bottom: 1px solid #21748C;
+	padding-bottom: 2px;
+}
+
+.dark-header ul#mainnav > li > a:hover > span {
+	border-bottom: 1px solid #21748C !important;
+}
+
+.dark-header ul#mainnav > li.item-active > a, .dark-header ul#mainnav > li > a.sf-with-ul:hover, .dark-header ul#mainnav li > a.sf-with-ul:active, .dark-header ul#mainnav > li > a.sf-with-ul:hover, .dark-header ul#mainnav li > a.sf-with-ul:active, .dark-header ul#mainnav li a:hover, .dark-header ul#mainnav li a:active, .dark-header ul#mainnav li a.current-menu-item {
+	color: #21748C;	
+}
+
+.skillbar-bar {
+	background: #21748C;
+}
+
+.wrapper-service i {
+	color: #21748C;	
+}
+
+.tweet_time a:hover, a.tweet_action:hover {
+    color: #21748C;
+}
+
+.team-text h3 span {
+	border-bottom: 1px solid #21748C;
+}
+
+.testimonial-name {
+	color: #21748C;
+}
+
+.dt-service-item:hover {
+	background: #21748C;
+	border: 1px solid #21748C;
+}
+
+h1.section-title:after {
+	background: #21748C;
+}
+
+.team-social a:hover {
+	color:#21748C;
+}
+
+.service-item i {
+	color:#21748C;
+}
+
+
+ul#social li a:hover {
+	border-color: #21748C;
+}
+
+ul#mainnav li ul li a:hover, ul#mainnav li ul li ul li a:hover, .dark-header ul#mainnav li ul li a:hover, .dark-header ul#mainnav li ul li ul li a:hover {
+    color: #21748C;
+}
+
+.tags ul li a:hover {
+	background:#21748C;
+}
+
+.sidebar-post span a {
+	color:#21748C;
+}
+
+ul#filters li a.selected {
+	border: 1px solid #21748C;
+	color: #323232;
+}
+
+h1.masonry-title a:hover,h3.masonry-title a:hover,  .post-content h1 a:hover {
+	color:#21748C;
+}
+
+.wrap ul.wrap-nav > li a:hover {
+	color:#21748C;
+}
+
+.wrap ul.wrap-nav li.current > a {
+	color:#21748C;
+}
+
+a.comment-reply-link:hover {
+	background:#21748C;
+	color:#fff !important;
+}
+
+ul.tabs li.active {
+    border-top: 2px solid #21748C;
+    top: 1px;
+    
+}
+
+.featured-column .column-shadow {
+	background:#21748C;
+}
+
+.featured-column .package-title {
+	border-bottom: 3px solid #21748C;
+	background: #21748C;	
+	border-right: 0;
+}
+
+.customlist li i {
+	color:#21748C;
+	font-size: 14px;
+}
+
+.widget a:hover {
+	color:#21748C;
+}
+
+ul.tags a:hover {
+	color:#21748C;
+}
+
+.authorp h2 a:hover {
+	color:#21748C;
+}
+
+.comment a:hover {
+	color:#21748C;
+}
+
+#toggle-view li.activated h3 {
+	color:#21748C;
+}
+
+
+ul#filters li a:hover {
+	border: 1px solid #21748C;
+	color: #323232;
+}
+
+ul#filters li.selected a {
+	color:#fff;
+	background:#21748C;	
+}
+
+.portfolio h3 a:hover {
+	color:#21748C;
+}
+
+.pagenav a:hover {
+    background:#21748C;
+    color:#fff;
+	border: 1px solid #21748C;
+}
+
+span.current-menu-item {
+    background: #21748C; 
+    border: 1px solid #21748C;
+}
+
+#footer a:hover {
+	color:#21748C;
+}
+
+.toggle-plus {
+	width: 28px;
+	height: 28px;
+	font-family: fontawesome;
+	color: #323232;
+	cursor: pointer;
+	text-align: right;
+}
+
+.toggle-plus:before {
+	content: "\f0dd";	
+}
+
+.toggle-minus {
+	width: 28px;
+	height: 28px;
+	color: #21748C;
+	top: 14px !important;
+}
+
+.toggle-minus:before {
+	content:"\f0de";
+}
+
+.jp-play-bar {
+	background: #21748C;
+}
+.jp-volume-bar-value {
+	background: #21748C;
+}
+
+html .wpb_content_element .wpb_tabs_nav li.ui-state-active {
+	border-top: 2px solid #21748C;
+	top: 1px;	
+}
+
+html .wpb_tour.wpb_content_element .wpb_tour_tabs_wrapper .wpb_tabs_nav li.ui-state-active  {
+	border-top: none;
+	border-left: 2px solid #21748C;
+	top: 0;
+}
+
+html .wpb_content_element .wpb_tour_tabs_wrapper .wpb_tabs_nav li.ui-state-active a {
+	padding-left: 23px;
+}
+
+html .wpb_accordion .wpb_accordion_wrapper .ui-state-active a, html .wpb_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon {
+	color: #21748C;
+}
+
+html h4.wpb_toggle_title_active, html h4.wpb_toggle.wpb_toggle_title_active:after {
+	color: #21748C;
+}

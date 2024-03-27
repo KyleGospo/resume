@@ -1,0 +1,17 @@
+/*
+Theme Name: Gospo
+Theme URI: https://kylegospodneti.ch
+Description: Child Theme for the Patti WordPress Theme
+Author: Kyle Gospodnetich
+Author URI: https://kylegospodneti.ch
+Template: patti
+Version: 1.4
+*/
+
+/* =Imports styles from the parent theme
+-------------------------------------------------------------- */
+@import url('/wp-content/themes/patti/style.css');
+
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
