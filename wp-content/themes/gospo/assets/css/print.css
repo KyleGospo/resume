@@ -10,6 +10,12 @@
     float: left;
 }
 
+.ublue-logo,
+.microsoft-logo {
+    max-width: 300px;
+    height: auto;
+}
+
 .vc_separator,
 .vc_empty_space,
 .bottom-link-container,
