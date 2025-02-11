@@ -1,0 +1,21 @@
+name: Bazzite Repo Data
+on:
+  schedule: [{cron: "0 0 * * *"}]
+  workflow_dispatch:
+jobs:
+  update-ghp-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download File
+        run: |
+          curl https://api.github.com/repos/ublue-os/bazzite --output ./bazzite-repo-data.json
+        working-directory: ${{ github.workspace }}
+
+      - name: Write bazzite-repo-data.json to Repostiory
+        uses: test-room-7/action-update-file@v2
+        with:
+            file-path: bazzite-repo-data.json
+            commit-msg: Bazzite Repo Data Update
+            github-token: ${{ secrets.GITHUB_TOKEN }}

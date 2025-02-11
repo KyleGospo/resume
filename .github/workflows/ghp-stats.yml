@@ -18,7 +18,7 @@ jobs:
           jq 'to_entries | map(select(.value != {})) | .[-10:] | from_entries' ghp-stats-full.json > ghp-stats.json 
         working-directory: ${{ github.workspace }}
 
-      - name: Write image_list.json to Repostiory
+      - name: Write ghp-stats.json to Repostiory
         uses: test-room-7/action-update-file@v2
         with:
             file-path: ghp-stats.json
