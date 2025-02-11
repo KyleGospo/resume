@@ -1,4 +1,40 @@
 jQuery(document).ready(function () {
+	//Bazzite Numbers
+	jQuery.ajax({
+		url : "https://kylegospodneti.ch/ghp-stats.json",
+		dataType: "json",
+		success : function (data) {
+			var totalPulls = 0;
+			var lastData = data[Object.keys(data)[Object.keys(data).length - 1]];
+
+			jQuery.each(lastData, function(key, value) {
+				if (key.indexOf("bazzite") !== -1) {
+					totalPulls += value;
+				}
+			});
+
+			var pullCount = Intl.NumberFormat('en-US', {
+				notation: "compact",
+				maximumFractionDigits: 1
+			}).format(totalPulls);
+
+			jQuery('.bazzite-pull-count').text(pullCount);
+		}
+	});
+
+	jQuery.ajax({
+		url : "https://kylegospodneti.ch/bazzite-repo-data.json",
+		dataType: "json",
+		success : function (data) {
+			var stargazersCount = Intl.NumberFormat('en-US', {
+				notation: "compact",
+				maximumFractionDigits: 1
+			}).format(data['stargazers_count']);
+
+			jQuery('.bazzite-star-count').text(stargazersCount);
+		}
+	});
+
 	//Initialize Wave Effects
 	Waves.attach('.button-float .vc_btn3-style-flat', ['waves-light', 'waves-float']);
 	Waves.attach('.email-btn', ['waves-button', 'waves-float']);
