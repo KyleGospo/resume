@@ -15,7 +15,7 @@ jobs:
 
       - name: Truncate and Clean File
         run: |
-          jq 'to_entries | map(select(.value != {})) | .[-90:] | from_entries' ghp-stats-full.json > ghp-stats.json 
+          jq 'to_entries | map(select(.value != {})) | .[-10:] | from_entries' ghp-stats-full.json > ghp-stats.json 
         working-directory: ${{ github.workspace }}
 
       - name: Write image_list.json to Repostiory
