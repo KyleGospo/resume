@@ -10,6 +10,11 @@
     float: left;
 }
 
+main {
+    display: none;
+    visibility: hidden;
+}
+
 .ublue-logo,
 .microsoft-logo {
     max-width: 300px;
