@@ -2,6 +2,10 @@
 	text-align:center;
 }
 
+#navigation {
+  background: #fff;
+}
+
 .center-small {
 	text-align:center;
 	max-width: 600px;
